@@ -1,0 +1,6 @@
+collections:
+  authors:
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
