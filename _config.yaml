@@ -1,9 +1,9 @@
-baseurl: /
-url: https://cyborgcabbage.github.io
-
 collections:
   authors:
+
+root: /
 
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-github-metadata
