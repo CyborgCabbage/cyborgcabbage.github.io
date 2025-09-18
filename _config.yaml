@@ -6,4 +6,3 @@ root: /
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-github-metadata
