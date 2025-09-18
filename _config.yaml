@@ -1,3 +1,6 @@
+baseurl: /
+url: https://cyborgcabbage.github.io
+
 collections:
   authors:
 
