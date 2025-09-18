@@ -1,0 +1,8 @@
+<header>
+  <h1>Finlay Laidlaw</h1>
+  <nav>
+    {% for item in site.data.navigation %}
+      <a href="{{ item.link }}"{% if page.url == item.link %} class="nav-current"{% endif %}>{{ item.name }}</a>
+    {% endfor %}
+  </nav>
+</header>

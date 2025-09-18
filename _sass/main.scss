@@ -1,3 +1,47 @@
-.current {
+
+$bar-color: #004237;
+$bg-color: #0e0e0e;
+$text-color: #ffffff;
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+main {
+  padding: 1em;
+}
+a {
+    color: $text-color;
+}
+
+header, footer {
+  background-color: $bar-color;
+  padding: 1em;
+  min-height: 3em;
+}
+header > h1 {
+  margin: 0;
+  margin-bottom: 0.2em;
+}
+.nav-current {
   color: lime;
+}
+
+nav > a {
+  padding-right: 0.5em;
 }
