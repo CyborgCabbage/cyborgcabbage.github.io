@@ -21,10 +21,16 @@ body {
   margin: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  background-color: $bg-color;
+  background-image: url("/assets/images/bg.png");
+  background-blend-mode: multiply;
+  background-repeat: repeat;
 }
+
 main {
   padding: 1em;
 }
+
 a {
     color: $text-color;
 }
