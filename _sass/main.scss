@@ -27,27 +27,45 @@ body {
   background-repeat: repeat;
 }
 
-main {
-  padding: 1em;
-}
-
 a {
     color: $text-color;
 }
 
 header, footer {
   background-color: $bar-color;
-  padding: 1em;
   min-height: 3em;
 }
-header > h1 {
+
+header, footer, main {
+  padding: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   margin-bottom: 0.2em;
 }
+
 .nav-current {
   color: lime;
 }
 
 nav > a {
   padding-right: 0.5em;
+}
+
+.entry {
+}
+
+.box {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+@media screen and (width < 820px) {
+  .box {
+    flex-direction: column;
+  }
 }
