@@ -91,6 +91,12 @@ nav > a {
   font-style: italic;
 }
 
+.date {
+  text-align: center; 
+  font-style: bold;
+  color: lightgrey;
+}
+
 @media screen and (width < 820px) {
   .box {
     flex-direction: column;
