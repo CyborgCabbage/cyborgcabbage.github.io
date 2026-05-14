@@ -27,6 +27,10 @@ body {
   background-repeat: repeat;
 }
 
+main {
+  max-width: 1000px;
+}
+
 a {
     color: $text-color;
 }
