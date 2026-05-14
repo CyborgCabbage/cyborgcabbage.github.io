@@ -1,7 +1,7 @@
 ---
 layout: post
 tag: highlight
-image: /assets/images/thumb_sumo.jpg
+image: /assets/images/thumb_sumo.png
 ---
 
 In August 2024 I embarked on a one year work placement at Sumo Digital Sheffield.
