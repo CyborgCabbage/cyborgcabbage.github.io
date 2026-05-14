@@ -28,7 +28,7 @@ body {
 }
 
 main {
-  max-width: 1000px;
+  max-width: 80ch;
   margin: 0 auto;
 }
 
@@ -86,7 +86,6 @@ nav > a {
 
 .inline-image {
   width: 100%; 
-  max-width: 800px;
   display: block;
   margin: auto;
 }
