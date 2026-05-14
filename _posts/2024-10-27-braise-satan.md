@@ -1,7 +1,7 @@
 ---
 layout: post
 tag: highlight
-image: /assets/images/thumb_braise_satan.png
+image: /assets/images/thumb_braise_satan.jpg
 ---
 
 [Braise Satan on Steam](https://store.steampowered.com/app/3295990/Braise_Satan/)
