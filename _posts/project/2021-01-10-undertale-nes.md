@@ -1,5 +1,6 @@
 ---
 layout: post
+title: Undertale for the NES
 ---
 
 Back during lock-down I became interested retro game development and ended up making a little demo, a fight from the indie-game [Undertale](https://undertale.com/) remade to work on the NES. 

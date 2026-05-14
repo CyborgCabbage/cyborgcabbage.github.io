@@ -1,6 +1,7 @@
 ---
 layout: post
 tag: highlight
+title: Sumo Digital Placement (1 year)
 image: /assets/images/thumb_sumo.png
 ---
 
