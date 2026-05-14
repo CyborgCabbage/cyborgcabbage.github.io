@@ -2,7 +2,6 @@
 layout: default
 title: Home
 ---
-<h1>Featured</h1>
 <div class="box">
   {% assign posts = site.posts | where_exp: "item", "item.tags contains 'highlight'" %}
   {% for post in posts limit:3 %}
