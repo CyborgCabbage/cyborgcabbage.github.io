@@ -69,6 +69,7 @@ nav > a {
 
 .box {
   display: flex;
+  flex: 1 1 0;
   justify-content: center;
   text-align: center;
   align-items: start;
@@ -79,5 +80,6 @@ nav > a {
   .box {
     flex-direction: column;
     align-items: center;
+    flex: auto;
   }
 }
