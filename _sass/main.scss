@@ -79,6 +79,17 @@ nav > a {
   gap: 0.6rem;
 }
 
+.inline-image {
+  width: 100%; 
+  max-width: 800px;
+  display: block;
+  margin: auto;
+}
+
+.inline-caption {
+  text-align: center;
+}
+
 @media screen and (width < 820px) {
   .box {
     flex-direction: column;
