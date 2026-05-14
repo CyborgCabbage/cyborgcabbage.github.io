@@ -58,14 +58,14 @@ nav > a {
 
 .box {
   display: flex;
-
   justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: 0.6rem;
 }
 
 @media screen and (width < 820px) {
   .box {
     flex-direction: column;
+    align-items: center;
   }
 }

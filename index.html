@@ -3,7 +3,8 @@ layout: default
 title: Home
 ---
 <div class="box">
-  <div class="entry"><img src="/assets/images/thumbnail.png"></img><h2>Test 1<h2></div>
-  <div class="entry"><img src="/assets/images/thumbnail.png"></img><h2>Test 2<h2></div>
-  <div class="entry"><img src="/assets/images/thumbnail.png"></img><h2>Test 3<h2></div>
+  {% assign posts = site.posts | where_exp: "item", "item.tags contains 'highlight'" %}
+  {% for post in posts limit:3 %}
+  <div class="entry"><a href="{{ post.url }}"><img src="/assets/images/thumbnail.png"></img><h2>{{ post.title }}<h2></a></div>
+  {% endfor %}
 </div>

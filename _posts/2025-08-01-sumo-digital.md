@@ -1,5 +1,6 @@
 ---
 layout: post
+tag: highlight
 ---
 
 In August 2024 I embarked on a one year work placement at Sumo Digital Sheffield.
