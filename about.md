@@ -2,6 +2,8 @@
 layout: default
 title: About
 ---
-# About page
+I was born and raised in Edinburgh. I was interested in game development from a young age; I began learning programming at the beginning of high school.
 
-This page tells you a little bit about me.
+I decided apply for the BSc (Hons) Computer Games Technology course at Abertay University because it is what I am most passionate about. I have made mods, participated in game jams, the Grads in Games Rising Star Programming challenge and a placement at Sumo Digital.
+
+Some games that inspire me today are: Outer Wilds, Deltarune, Celeste, and Kerbal Space Program
