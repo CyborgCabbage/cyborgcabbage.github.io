@@ -3,6 +3,8 @@ layout: post
 title: Undertale for the NES
 ---
 
+[Undertale for NES cart download]({{ site.url }}/assets/downloads/undertale-nes/napstablook.nes)
+
 Back during lock-down I became interested retro game development and ended up making a little demo, a fight from the indie-game [Undertale](https://undertale.com/) remade to work on the NES. 
 
 It’s not a huge project, but I had fun learning 6502 assembler and the quirks of the NES.

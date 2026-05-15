@@ -5,7 +5,9 @@ title: AURIONNAUT
 
 [AURIONNAUT on itch.io](https://cyborgcabbage.itch.io/aurionnaut)
 
-I decided to go with a space combat game for a few reasons:
+This project was created for the IntoGames Search for a Star competition, in the category of programming.
+
+The competition was open ended in terms of what game you could make, I decided to go with a space combat game for a few reasons:
 - I wanted to make a 3D game.
 - “Space” is a simple environment that shouldn’t require many models or textures.
 - I had just seen some videos about Elite (1984) and it was very inspiring to me.
