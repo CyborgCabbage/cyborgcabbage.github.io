@@ -4,6 +4,7 @@ tag: highlight
 title: Braise Satan
 image: /assets/images/thumb_braise_satan.jpg
 ---
+{% youtube "https://www.youtube.com/watch?v=NZhl5vbofhI" %}
 
 [Braise Satan on Steam](https://store.steampowered.com/app/3295990/Braise_Satan/)
 

@@ -6,8 +6,8 @@ root: /
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-youtube
 
 exclude:
   - .vscode/
   - .github/
-  

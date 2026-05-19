@@ -2,8 +2,7 @@
 layout: post
 title: Twin Trigger
 ---
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QyXw87NgPRc?si=J5DkmObo0iUBU8XN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{% youtube "https://www.youtube.com/watch?v=QyXw87NgPRc" %}
 
 [Twin Trigger on itch.io](https://abderrahimjami.itch.io/twin-trigger)
 
