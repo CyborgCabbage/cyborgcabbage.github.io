@@ -8,6 +8,7 @@ I decided apply for the BSc (Hons) Computer Games Technology course at Abertay U
 
 Some games that inspire me today are: Outer Wilds, Deltarune, Celeste, and Kerbal Space Program
 
-Contact: 
-finlaylaidlaw@gmail.com
+<!-- Email obfuscation, some spans are removed with CSS by display:none -->
+<div class="email"><span>finlay</span><span>jericho</span><span>laidlaw@</span><span>zemp.</span><span>gm</span><span>clink.</span><span>ail.</span><span>kirkle.</span><span>com</span></div>
+
 [LinkedIn](https://uk.linkedin.com/in/finlay-laidlaw-3302ab2b1)

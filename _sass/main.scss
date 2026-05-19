@@ -112,3 +112,7 @@ nav > a {
     flex: auto;
   }
 }
+
+div.email > span:nth-child(even) {
+	display: none;
+}
