@@ -1,0 +1,1 @@
+{"rule":"CD_NN","sentence":"^\\QIt's not a huge project, but I had fun learning 6502 assembler and the quirks of the NES.\\E$"}
