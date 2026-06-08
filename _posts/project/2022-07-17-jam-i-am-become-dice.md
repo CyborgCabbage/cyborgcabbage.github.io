@@ -3,4 +3,7 @@ layout: post
 title: I Am Become Dice
 ---
 
-Text goes here
+Rage game
+Difficult theme
+Not actually sure if this is a good game
+Used music I made myself

@@ -12,4 +12,4 @@ Braise Satan is a cooking game set in hell. It began as a university course proj
 
 This was the first time I had used Unreal Engine 5 or worked in team for an extended period of time, so I learned a lot about how to collaborate.
 
-I was one of two programmers on the project, and the only C++ programmer. Some things I was the primary contributor for were the cooking mechanics, recipe system, and scoring.
+I was one of two programmers on the project, and the only C++ programmer. Some things I was the primary contributor for were the cooking mechanics, recipe system, and scoring. Though a lot of the work wasn't programming per se, instead focusing on learning how to use engine system properly, implementing materials, collision, setting up levels so that navigation works.
