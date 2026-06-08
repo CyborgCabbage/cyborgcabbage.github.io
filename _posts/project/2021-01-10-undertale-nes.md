@@ -40,7 +40,7 @@ To implement a state machine in 6502 assembly, a jump table is used. There is a 
 
 # Graphics
 
-<img class="inline-image" src="/assets/images/charmap.jpg">
+<img class="inline-image" src="/assets/images/charmap.png">
 <div class="inline-caption">The CHR ROM</div>
 
 All the graphics fit in one sprite sheet (correct term?)
