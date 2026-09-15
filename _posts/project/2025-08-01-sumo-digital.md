@@ -5,19 +5,15 @@ title: Sumo Digital Placement (1 year)
 image: /assets/images/thumb_sumo.png
 ---
 
-In August 2024 I embarked on a one year work placement at Sumo Digital Sheffield.
+In August 2024 I embarked on a one year work placement at Sumo Digital Sheffield. While at Sumo, I worked on two unannounced Unreal Engine projects.
 
-I had the opportunity to learn how to work in a large team (~50 to 100 people) and further develop my Unreal and C++ programming skills.
+Technologies:
+Unreal Engine 5, C++, Blueprints, Perforce, Jira, Swarm, UMG, Rewind Debugger, Enhanced Input, Mover, ImGui, Wwise (Unreal integration)
 
-Tools Used:
-- Unreal Engine 5
-- Jira
-- Perforce
-
-Programming Areas (all in the context of Unreal Engine):
-- Networking
-- Game-modes/rules implementation (scores, assigning teams, etc.)
-- Player Movement/Abilities
-- Debugging Tools (using ImGUI)
-- Gameplay Systems
-- Lots of bug fixing
+Experiences:
+- Working in a large team (~70) with task management and code review
+- Working on UI logic, debug tools, game mechanics, camera, player movement, and controls
+- Joining existing projects and quickly getting up to speed with development practices and tools
+- Implementing features from both design documents and informal requests
+- Documenting the systems and tools I create
+- Implementing game rules (e.g. scores, rounds, team assignment) in a networked multiplayer context
