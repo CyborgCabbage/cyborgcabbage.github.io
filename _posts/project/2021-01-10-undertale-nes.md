@@ -19,30 +19,38 @@ It’s not a huge project, but I had fun learning 6502 assembler and the quirks 
 
 I used [this project](https://github.com/gregkrsak/first_nes) as a basis, it provided the setup for compiling a NES cartridge and some of the basics which are the same for every game (clearing memory, getting controller input, etc.).
 
-Fortunately, an NES compatible version of the boss fight music had already been created by [VinylCheese](https://youtu.be/l0ciHXyXu_0) and the enemy sprite is from the original game. To play the music, I used an existing driver which - honestly - I have no idea where I got it from, and probably there are better options nowadays so don't take this list of resources as instructional.
+Fortunately, an NES compatible version of the boss fight music had already been created by [VinylCheese](https://youtu.be/l0ciHXyXu_0) and the enemy sprite is from the original game. To play the music, I used an existing driver which - honestly - I have no idea where I got it from, and probably there are better options nowadays so don't take this list of resources as instructional!
 
 For learning resources, the [Undertale Wiki](https://undertale.wiki/w/Napstablook/In_battle) provided information on how the fight worked mechanically (but I also played through it many times to figure out the exact effects of every action). 
 
 The [NES Dev Wiki](https://www.nesdev.org/wiki/Nesdev_Wiki) was my primary resource NES development information.
 
-I used [Mesen](https://www.mesen.ca/), which is supposed to be the most accurate NES emulator and has useful debugging tools.
+I used [Mesen](https://www.mesen.ca/), which is I believe the gold standard for accurate NES emulation and has heaps of useful debugging tools.
 
 # Entering the Matrix
 
 <img class="inline-image" src="/assets/images/thematrix034.jpg">
 <div class="inline-caption">No UI/UX developers in the apocalypse apparently...</div>
 
-A program called CC65 is used to compile 6502 assembly, it is also capable of compiling C code, but I wanted to use assembly language as a learning experience. Though retro software development is often charcterised as more "hardcore", it seems that in reality complexity has expanded in both directions. Higher level and easier languages become available, but at the same time, the lower levels have become more complicated, and the "stack" as a whole has become taller. 6502 assembly is closer to the hardware, but because the hardware is less complex than modern hardware I think it works out to about the same difficulty as something like C. The experience reminds me of graphics programming: there's more friction, and I had to adapt to a new mental model than what I use for C-like languages.
+A program called CC65 is used to compile 6502 assembly, it is also capable of compiling C code, but I wanted to use assembly language as a learning experience (and the performance for C is much worse typically). One observation I'd like to make: though retro software development is often charcterised as more "hardcore", it seems that in reality complexity has expanded in both directions. Higher level and easier languages become available, but at the same time, the lower levels have become more complicated, and the "stack" as a whole has become taller. 6502 assembly is closer to the hardware, but because the hardware is less complex than modern hardware I think it works out to about the same difficulty as something like C. The experience reminds me of graphics programming: there's more friction, and I had to adapt to a new mental model than what I use for C-like languages.
 
 # State Machine Architecture
 
-To approximate object oriented programming on the more limited platform, I created two state machines. First, a state machine for the overall game state, essentially what menu is currently open. Second, a state machine for each sprite, which includes functionality for player movement and Napstablook's tear attack.
+To organise the execution of the program, I created two state machines. First, a state machine for the overall game state, essentially what "screen" is currently active. Second, a state machine for each sprite, which includes functionality for player movement and Napstablook's tear attack.
 To implement a state machine in 6502 assembly, a jump table is used. There is a static list of 2 byte addresses to each state function. The [RTS trick](https://www.nesdev.org/wiki/RTS_Trick) to jump program execution to the current states function.
+
+# Cartridges
+
+The NES uses cartridges, which means that some of the constraints an NES game is developed within are determined by the cartridge hardware used. A particular configuration of cartridge hardware is called a "mapper". I used the most basic mapper, known as NROM, it is the same mapper that is used for "Super Mario Bros.". It has one 8K ROM for graphics data (that corresponds to one sprite sheet and one tile sheet), and it has one 32K ROM for program data.
+
+If I wanted to do more than one or two fights, perhaps even port the whole game (though I am not going to do that), I would need a much more capable cartridge. It seems that the homebrew hardware of choice is UNROM-512 which has 
 
 # Graphics
 
 <img class="inline-image" src="/assets/images/charmap.png">
 <div class="inline-caption">The CHR ROM</div>
+
+The NES uses 
 
 All the graphics fit in one sprite sheet (correct term?)
 256 characters
