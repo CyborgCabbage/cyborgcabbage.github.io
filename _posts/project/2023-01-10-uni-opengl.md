@@ -4,6 +4,8 @@ title: OpenGL Mirrors & Shadow Volumes
 published: false
 ---
 
+
+
 Old OpenGL
 Mirrors using stencil and clipping plane
 Shadow volumes calculated manually
