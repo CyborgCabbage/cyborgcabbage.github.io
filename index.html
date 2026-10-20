@@ -4,7 +4,7 @@ title: Home
 ---
 <div class="box">
   {% assign posts = site.posts | where_exp: "item", "item.tags contains 'highlight'" %}
-  {% for post in posts limit:3 %}
+  {% for post in posts limit:4 %}
   <div class="entry"><a href="{{ post.url }}"><img src="{{ post.image }}" width=240 height=160></img><h2>{{ post.title }}<h2></a></div>
   {% endfor %}
 </div>

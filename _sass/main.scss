@@ -86,6 +86,16 @@ nav > a {
   gap: 0.6rem;
 }
 
+@media screen and (width < 820px) {
+  .box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .entry {
+    flex: auto;
+  }
+}
+
 .inline-image {
   width: 100%; 
   display: block;
@@ -101,16 +111,6 @@ nav > a {
   text-align: center; 
   font-style: bold;
   color: lightgrey;
-}
-
-@media screen and (width < 820px) {
-  .box {
-    flex-direction: column;
-    align-items: center;
-  }
-  .entry {
-    flex: auto;
-  }
 }
 
 div.email > span:nth-child(even) {
