@@ -1,6 +1,5 @@
 ---
 layout: post
-tag: highlight
 title: Braise Satan
 image: /assets/images/thumb_braise_satan.jpg
 ---
