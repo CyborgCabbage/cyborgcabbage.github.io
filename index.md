@@ -2,7 +2,6 @@
 layout: default
 title: Home
 ---
-# Highlights
 
 {::nomarkdown}
 <div class="box">
