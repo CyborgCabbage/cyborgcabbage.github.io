@@ -18,7 +18,7 @@ title: Home
 </div>
 {:/nomarkdown}
 
-# About
+# Hi, It's Me, Finlay
 My interest in programming and game development began early, first with GameMaker and then with Python and C++ in high school in Edinburgh. This culminated in me entering the Computer Games Technology course at Abertay. 
 
 I have made mods, participated in game jams, the Grads in Games Rising Star Programming challenge, and Abertay's DARE Academy. From 2024 to 25 I worked as a Placement Programmer at Sumo Digital, and from 2025 to 26 I went back to university to finish my degree while working on Heldritch Rush in the background. 
