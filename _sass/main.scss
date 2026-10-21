@@ -2,6 +2,7 @@
 $bar-color: #004237;
 $bg-color: #0e0e0e;
 $text-color: #ffffff;
+$link-color: #9bd2ff;
 
 * {
   box-sizing: inherit;
@@ -40,7 +41,7 @@ main {
 }
 
 a {
-    color: $text-color;
+    color: $link-color;
 }
 
 header, footer {
@@ -57,16 +58,14 @@ header h1 {
   margin-bottom: 0.2em;
 }
 
+
+header a {
+  color: $text-color;
+  text-decoration: none;
+}
+
 .centred {
   text-align: center;
-}
-
-.nav-current {
-  color: lime;
-}
-
-nav > a {
-  padding-right: 0.5em;
 }
 
 .entry img {
@@ -113,6 +112,6 @@ nav > a {
   color: lightgrey;
 }
 
-div.email > span:nth-child(even) {
+.email > span:nth-child(even) {
 	display: none;
 }

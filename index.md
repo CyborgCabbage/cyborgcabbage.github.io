@@ -25,10 +25,7 @@ I have made mods, participated in game jams, the Grads in Games Rising Star Prog
 
 Some games that inspire me today are: Outer Wilds, Deltarune, Tunic, and the Half-Life series.
 
-<!-- Email obfuscation, some spans are removed with CSS by display:none -->
-<div class="email"><span>finlay</span><span>jericho</span><span>laidlaw@</span><span>zemp.</span><span>gm</span><span>clink.</span><span>ail.</span><span>kirkle.</span><span>com</span></div>
-
-[LinkedIn](https://uk.linkedin.com/in/finlay-laidlaw-3302ab2b1)
+[Download CV]({{ site.url }}/assets/downloads/about/FinlayLaidlaw_CV.pdf) 
 
 # Skills
 ## Unreal Engine 5
