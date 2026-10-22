@@ -73,3 +73,23 @@ An example series of events:
 - spawn enemy wave
 - wait for 1 second
 In one tick, the first two events will executed and the enemies will be spawned. The wave event ends when all enemies have been killed, there would then be 1 second delay before the player moves on.
+
+{::comment}
+
+## Weapons System
+
+## Level Visibility
+
+### Room Cutout
+
+### Hiding Floors
+
+Overlap volumes are used to define which actor 
+
+## Input and User Interface
+
+Common UI
+Input rebinding
+
+## Play Testing
+{:/comment}

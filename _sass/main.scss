@@ -3,6 +3,7 @@ $bar-color: #004237;
 $bg-color: #0e0e0e;
 $text-color: #ffffff;
 $link-color: #7bff98;
+$hover-color: #daffe2;
 
 * {
   box-sizing: inherit;
@@ -44,6 +45,10 @@ a {
     color: $link-color;
 }
 
+a:hover {
+    color: $hover-color;
+}
+
 header, footer {
   background-color: $bar-color;
   min-height: 3em;
@@ -58,10 +63,23 @@ header h1 {
   margin-bottom: 0.2em;
 }
 
+header p {
+  background-color: $link-color;
+  color: $bar-color;
+  margin: 0;
+  padding: 0 0.3em;
+  font-size: 130%;
+}
 
 header a {
   color: $text-color;
   text-decoration: none;
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .centred {
@@ -114,4 +132,17 @@ header a {
 
 .email > span:nth-child(even) {
 	display: none;
+}
+
+.download a {
+  background-color: $link-color;
+  color: $bar-color;
+  margin: 0;
+  padding: 0 0.3em;
+  font-size: 130%;
+  border-radius: 7px;
+  text-decoration: none;
+}
+.download a:hover {
+  background-color: $hover-color;
 }

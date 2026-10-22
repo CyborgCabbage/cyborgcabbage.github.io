@@ -24,9 +24,8 @@ I have made mods, participated in game jams, the Grads in Games Rising Star Prog
 
 Some games that inspire me today are: Outer Wilds, Deltarune, Tunic, and the Half-Life series.
 
-[Download CV]({{ site.url }}/assets/downloads/about/FinlayLaidlaw_CV.pdf) 
 
-# Skills
+
 ## Unreal Engine 5
 Unreal Engine 5 is the platform with which I have the most experience. 
 I worked with it professionally at Sumo for a year, working on multiplayer networking, UI logic, and gameplay systems. 
@@ -36,11 +35,15 @@ C++ has been my language of choice throughout my programming journey.
 I started using it in high school and have continued to hone my skills with it through university and my placement.
 ## Soft Skills
 I have worked in large and small teams and firmly believe that good games can only be made when there is a spirit of collaboration on the personal, intra- and inter- department level.
-## All Posts
-{::nomarkdown}
-<ul> 
-  {% for post in site.posts %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a> <span style="color: lightgrey; font-style: italic;">{{ post.date | date_to_string }}</span></li>
-  {% endfor %}
-</ul>
-{:/nomarkdown}
+
+[⇓ Download CV ⇓]({{ site.url }}/assets/downloads/about/FinlayLaidlaw_CV.pdf) 
+{:.download .centred}
+
+<details>
+  <summary>All Posts</summary>
+  <ul> 
+    {% for post in site.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a> <span style="color: lightgrey; font-style: italic;">{{ post.date | date_to_string }}</span></li>
+    {% endfor %}
+  </ul>
+</details>
