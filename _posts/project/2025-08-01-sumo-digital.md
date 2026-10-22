@@ -3,6 +3,7 @@ layout: post
 tag: highlight
 title: Sumo Digital Placement (1 year)
 image: /assets/images/thumb_sumo.png
+sortby: a
 ---
 
 In August 2024 I embarked on a one year work placement at Sumo Digital Sheffield. While at Sumo, I worked on two unannounced Unreal Engine projects.

@@ -5,7 +5,7 @@ title: Home
 
 {::nomarkdown}
 <div class="box">
-{% assign posts = site.posts | where_exp: "item", "item.tags contains 'highlight'" %}
+{% assign posts = site.posts | where_exp: "item", "item.tags contains 'highlight'" | sort: "sortby"  %}
 {% for post in posts limit:3 %}
 <div class="entry">
 <a href="{{ post.url }}">
