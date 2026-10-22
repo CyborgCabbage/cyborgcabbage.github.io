@@ -36,9 +36,6 @@ I started using it in high school and have continued to hone my skills with it t
 ## Soft Skills
 I have worked in large and small teams and firmly believe that good games can only be made when there is a spirit of collaboration on the personal, intra- and inter- department level.
 
-[⇓ Download CV ⇓]({{ site.url }}/assets/downloads/about/FinlayLaidlaw_CV.pdf) 
-{:.download .centred}
-
 <details>
   <summary>All Posts</summary>
   <ul> 

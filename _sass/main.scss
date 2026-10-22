@@ -63,15 +63,7 @@ header h1 {
   margin-bottom: 0.2em;
 }
 
-header p {
-  background-color: $link-color;
-  color: $bar-color;
-  margin: 0;
-  padding: 0 0.3em;
-  font-size: 130%;
-}
-
-header a {
+#header-name {
   color: $text-color;
   text-decoration: none;
 }
@@ -134,7 +126,7 @@ header .content {
 	display: none;
 }
 
-.download a {
+#header-download {
   background-color: $link-color;
   color: $bar-color;
   margin: 0;
@@ -143,6 +135,6 @@ header .content {
   border-radius: 7px;
   text-decoration: none;
 }
-.download a:hover {
+#header-download:hover {
   background-color: $hover-color;
 }
