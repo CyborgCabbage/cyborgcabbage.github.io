@@ -4,6 +4,8 @@ $bg-color: #0e0e0e;
 $text-color: #ffffff;
 $link-color: #d6fade;
 $hover-color: #7aff97;
+$quote-color: #ffffff11;
+
 
 * {
   box-sizing: inherit;
@@ -149,4 +151,18 @@ header .content {
 }
 #header-download:hover {
   background-color: $hover-color;
+}
+
+.quote {
+  background-color: $quote-color;
+  padding: 0.3em 0.6em;
+}
+
+
+.quote blockquote {
+  margin: 0.3em 0.3em 0.6em 1em;
+}
+
+.quote p {
+  margin: 0.3em 0.3em 0.3em 2em;
 }

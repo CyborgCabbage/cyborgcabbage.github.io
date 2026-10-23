@@ -29,6 +29,8 @@ My interest in programming and game development began early, first with GameMake
 
 I have made mods, participated in game jams, the Grads in Games [Rising Star Programming challenge][risingstar], and Abertay's [DARE Academy][braise]. From 2024 to 25 I worked as a Placement Programmer at [Sumo Digital][sumo], and from 2025 to 26 I went back to university to [finish my degree][qr] while working on [Heldritch Rush][heldritch] in the background. 
 
+Today I'm based in Dundee and looking for a job, either remote or local.
+
 Some games that inspire me today are: Outer Wilds, Deltarune, Tunic, and the Half-Life series.
 
 ## Unreal Engine 5
@@ -40,7 +42,16 @@ C++ has been my language of choice throughout my programming journey.
 I started using it in high school and have continued to hone my skills with it through university and my placement.
 If you want to see some of my code, [look here](https://github.com/CyborgCabbage/yournespal).
 ## Collaboration
-I have experience working in a large and small teams. I really enjoyed my first collaborative experience working on [Braise Satan][braise] in a team of 8, and I was also fortunate to work in larger team of around 70 at [Sumo][sumo] ([Thomas Chase](https://www.linkedin.com/in/thomas-chase-1674518), a game designer I worked with at Sumo was kind enough to leave a recommendation on my [LinkedIn](https://www.linkedin.com/in/finlay-laidlaw-3302ab2b1/)).
+I have experience working in a large and small teams. I really enjoyed my first collaborative experience working on [Braise Satan][braise] in a team of 8, and I was also fortunate to work in larger team of around 70 at [Sumo][sumo].
+
+<div class="quote">
+<blockquote cite="https://www.linkedin.com/in/finlay-laidlaw-3302ab2b1/">
+Finlay is a fantastic programmer to work with. He's got a great attitude, is extremely fast and capable at prototyping, and isn't afraid to speak up and make suggestions to improve the features he is working on. He's also really engaged and delivers work extremely quickly. 
+
+I'd happily work with Finlay again in the future, and have no doubt he has a bright future ahead of him in the games industry.
+</blockquote>
+<p>—Thomas Chase, Senior Principle 3Cs Designer at Sumo Digital Sheffield</p>
+</div>
 
 <br>
 <details>
