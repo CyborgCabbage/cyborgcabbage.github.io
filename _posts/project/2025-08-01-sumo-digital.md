@@ -6,15 +6,38 @@ image: /assets/images/thumb_sumo.png
 sortby: a
 ---
 
-In August 2024 I embarked on a one year work placement at Sumo Digital Sheffield. While at Sumo, I worked on two unannounced Unreal Engine projects.
+[ensure]: {% post_url /blog/2026-10-23-ensure %}
 
-Technologies:
-Unreal Engine 5, C++, Blueprints, Perforce, Jira, Swarm, UMG, Rewind Debugger, Enhanced Input, Mover, ImGui, Wwise (Unreal integration)
+In August 2024 I embarked on a one-year work placement at Sumo Digital Sheffield. While at Sumo, I worked on two unannounced Unreal Engine projects.
 
-Experiences:
-- Working in a large team (~70) with task management and code review
-- Working on UI logic, debug tools, game mechanics, camera, player movement, and controls
-- Joining existing projects and quickly getting up to speed with development practices and tools
-- Implementing features from both design documents and informal requests
-- Documenting the systems and tools I create
-- Implementing game rules (e.g. scores, rounds, team assignment) in a networked multiplayer context
+## Production
+
+Across both projects, I worked with Sumo's production tools: Perforce (version control), Jira (task management), Swarm (code review), Unreal Game Sync (CI/CD). It took me a bit to adjust to code review, but I like coding standards and writing clean code (anything to reduce the infinite possible implementation options) so by the end of my placement I was managing to write stuff that usually required no changes.
+
+## Project D5
+
+I worked on Project D5 from August to December 2024. At the time it was unannounced, but fortunately it has since gone through public beta testing [Project D5](https://store.steampowered.com/app/3734070/Project_D5/), so I feel more able to talk about it in detail.
+
+During my time working on Project D5 I was on the Game Modes team. Project D5 is a party game and so supports a variety of game modes.
+
+I worked on multiple game modes, including: hide and seek, race, and infection. After I had become familiar the production processes and shown I could complete programming tasks without needing much oversight, I was given "ownership" over the hide and seek game mode which meant I was responsible for implementing all bug fixes and changes needed for it. I also ended up taking on infection as well, when a change to the narrative required all the menus and game mode logic to be adjusted.
+
+I contributed bug fixes, UI implementations, and gameplay tweaks where-ever they were needed under the purview of the game modes team. For example: distributing scores to players, changing how teams were assigned, and how the game mode transitions from through its various phases (e.g. countdown, gameplay, next round, flipping teams, etc.). I also implemented new gameplay actors that were needed.
+
+One bugfix I'm quite proud of is an issue with incorrect trigger box behaviour which had been affecting every trigger box in the game for a while. In short, Sumo has an internal library of UE utilities shared across projects, the trigger box implementation in this library was sometimes keeping actors in its internal overlapping actor list when they shouldn't be and this caused inconsistencies in "OnBeginOverlap" and "OnEndOverlap" events. I think because trigger boxes have edge-cases already, no one was quite sure where the issue was coming from, or just assumed it was engine weirdness that needed to be worked around.
+
+## Unannounced Project
+
+I was given the opportunities to move to a different project in the new year, and I went for it because I wanted to get as much breadth of experience as I could while I was there.
+
+On the new (to me) project, I joined the 3Cs team (character, camera and control). 
+My first responsibilities were implementing debug features for the character, including flying, teleporting, and logging inputs and character state into the Rewind Debugger. 
+After that, the remainder of my time on the project was focused on player movement and combat abilities. 
+Implementing new abilities (in both categories), fixing bugs, adding settings for designers and hooks for sound effects. 
+I was also tasked with creating a system for enabling and disabling player abilities, so they could be gradually unlocked during the tutorial.
+
+## Reflection
+
+Reflecting on my time at Sumo, I am very grateful for the opportunity I was given when placements like these are so scarce in the industry. Something I intend to do differently in the future is take more initiative, other than fixing bugs I found I tended to stay "on task". Obviously, staying on task is broadly a good thing, but there were opportunities to contribute in a broader way which I overlooked in favour of doing what was in front of me. An example of something I could have taken initiative on is [the assert situation in Unreal][ensure].
+
+Another point I've been thinking a lot about is note taking, I did not make any personal record of what I was doing while at Sumo so now it is difficult to remember many of the details. Writing this page is in-part so I can make writing easier for myself and be ready to take better notes at my next position. [Tim Cain](https://www.youtube.com/watch?v=P0NKR9R0XTg) (the creator of Fallout) took lots of notes throughout his career and is able to tell so many stories, I really want to be in that position in the future.

@@ -17,11 +17,12 @@ title: Home
 </div>
 {:/nomarkdown}
 
-[sumo]: {% post_url 2025-08-01-sumo-digital %}
-[braise]: {% post_url 2024-10-27-braise-satan %}
-[qr]: {% post_url 2026-05-09-honours %}
-[heldritch]: {% post_url 2026-09-01-heldritch-rush %}
-[risingstar]: {% post_url 2024-01-24-aurionnaut %}
+[sumo]: {% post_url /project/2025-08-01-sumo-digital %}
+[braise]: {% post_url /project/2024-10-27-braise-satan %}
+[qr]: {% post_url /project/2026-05-09-honours %}
+[heldritch]: {% post_url /project/2026-09-01-heldritch-rush %}
+[risingstar]: {% post_url /project/2024-01-24-aurionnaut %}
+[ensure]: {% post_url /blog/2026-10-23-ensure %}
 
 # Hi, It's Me, Finlay
 My interest in programming and game development began early, first with GameMaker and then with Python and C++ in high school in Edinburgh. This culminated in me entering the Computer Games Technology course at Abertay. 

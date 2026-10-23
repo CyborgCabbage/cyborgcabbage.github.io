@@ -2,6 +2,14 @@
     "files.associations": {
         "*.html": "liquid",
         "**/assets/css/*.scss": "liquid-css",
-    }
+    },
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "latex",
+        "plaintext",
+        "markdown"
+    ]
 
 }
