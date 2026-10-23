@@ -2,8 +2,8 @@
 $bar-color: #004237;
 $bg-color: #0e0e0e;
 $text-color: #ffffff;
-$link-color: #7bff98;
-$hover-color: #daffe2;
+$link-color: #d6fade;
+$hover-color: #7aff97;
 
 * {
   box-sizing: inherit;
@@ -45,6 +45,9 @@ main {
 
 a {
     color: $link-color;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.1em;
+    text-decoration-color: rgba($link-color, 0.5);
 }
 
 a:hover {
@@ -54,6 +57,9 @@ a:hover {
 header, footer {
   background-color: $bar-color;
   min-height: 3em;
+  background-image: url("/assets/images/bg_bar.png");
+  background-blend-mode: multiply;
+  background-repeat: repeat;
 }
 
 header, footer, main {
@@ -95,6 +101,10 @@ header .content {
   text-align: center;
   align-items: start;
   gap: 0.6rem;
+}
+
+.box a {
+  text-decoration: none;
 }
 
 @media screen and (width < 820px) {
