@@ -44,14 +44,19 @@ If you want to see some of my code, [look here](https://github.com/CyborgCabbage
 ## Collaboration
 I have experience working in a large and small teams. I really enjoyed my first collaborative experience working on [Braise Satan][braise] in a team of 8, and I was also fortunate to work in larger team of around 70 at [Sumo][sumo].
 
-<div class="quote">
-<blockquote cite="https://www.linkedin.com/in/finlay-laidlaw-3302ab2b1/">
+<figure>
+  <blockquote>
+    <p>
 Finlay is a fantastic programmer to work with. He's got a great attitude, is extremely fast and capable at prototyping, and isn't afraid to speak up and make suggestions to improve the features he is working on. He's also really engaged and delivers work extremely quickly. 
-
+    </p>
+    <p>
 I'd happily work with Finlay again in the future, and have no doubt he has a bright future ahead of him in the games industry.
-</blockquote>
-<p>—Thomas Chase, Senior Principle 3Cs Designer at Sumo Digital Sheffield</p>
-</div>
+    </p>
+  </blockquote>
+  <figcaption>
+—Thomas Chase, Senior Principle 3Cs Designer at Sumo Digital Sheffield
+  </figcaption>
+</figure>
 
 <br>
 <details>
