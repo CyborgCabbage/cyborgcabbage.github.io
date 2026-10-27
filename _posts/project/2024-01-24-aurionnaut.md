@@ -14,7 +14,21 @@ The competition was open ended in terms of what game you could make, I decided t
 - “Space” is a simple environment that shouldn’t require many models or textures.
 - I had just seen some videos about Elite (1984) and it was very inspiring to me.
 
-We were given a basic framework with input and 2D DirectX rendering.
+# Gameplay
+
+The gameplay of my game is inspired heavily by elite, it is basically a stripped down version.
+
+The player does two things:
+- Trading at space stations
+- Travelling between space stations and (possibly) fighting pirates
+
+Unlike Elites huge universe, I wanted to limit the game to only the solar system. 
+
+# Architecture
+
+We were given a basic framework with input and 2D DirectX rendering. The project specification was open ended in terms of what game we could create, but we were supposed to stick to the provided architecture. In the provided architecture, implementation details were abstracted with interfaces (IGraphics, IInput, IShader, etc.), I expanded on this by implementing interfaces for physics, audio, and sprite-based font rendering.
+
+The backends I had made before had not used this level of abstraction, they used graphics APIs and libraries directly or a library like SFML. It was interesting to try and define a minimal API the satisfies my needs, and then iterate on it over the course of the project. I abstraction obviously isn't as useful as it could be because there is only one platform and one implementations, but creating an intermediary does help manage the separation of game and engine code.
 
 ## Physics
 
@@ -34,7 +48,11 @@ perspective) follows their rotations.
 
 ## User Interface
 
- 
+[DirectXTK](https://github.com/microsoft/DirectXTK) which implements batched font and sprite drawing in a way that I was able to integrate into the engine framework relatively easily. Due to the time constraints, I opted not to create a UI framework, instead UI logic was implemented on a case-by-case basis, working out the layout with maths.
+
+Doing things without a framework let me get the UI off the ground faster, but by the end of the two weeks I was regretting the decision. Still though, I was able to implement the main menu and space station menus. Though I wasn't able to to implement some of the extra space station features I had originally wanted, like a space ship repair/upgrade menu and a casino.
+
+A menu feature I like is the loading bar when you are travelling to a station. It is simple, but the fact that a pirate raid can come at any point during the loading brings some tension into it. The loading bar also takes longer for more distant journeys which works well for game feel.
 
 ## AI
 
@@ -51,18 +69,32 @@ With these constraints in mind I implemented a simple state machine:
 
 The ship is also always thrusting forward and will shoot the player if they are in line. 
 
-This state machine worked well enough for my small game, though I have no idea how to approach this kind of AI with a more complex environment. I am also relying on the fact that the player will usually be moving, if they sit still the AI will slam straight into them.
+This state machine worked well enough for my small game, though I have no idea how to approach this kind of AI with a more complex environment. I am also relying on the fact that the player will usually be moving, if they sit still the AI will slam straight into them (but who knows, maybe this is how real space pirates do it).
 
 ## Trading
 
-The trading model I created is quite simple
+The player can buy and sell a number of trade goods. Each good has a series of variables governing its market behaviour. 
+
+{% highlight cpp %}
+class TradeGood {
+public:
+	TradeGood(const std::wstring& Name, bool Sensitive, float HalfLife, float BasePrice, float PriceVariance, float PriceFrequency, const std::wstring& Description);
+	std::wstring Name;
+	bool Sensitive;
+	int HalfLifeDays;// (not implemented)
+	float PriceBase;
+	float PriceVariance;
+	float PriceFrequency;
+	std::wstring Description;
+};
+{% endhighlight %}
 
 ## Reflection
 
 I think the game turned out fun! It is obviously not a complete experience, and the pirates can be annoying to fight, but you can make some trades and shoot some pirates and there is a decently rewarding challenge in it.
 
 Things I would do differently:
-- I think it would have been better to work out a simple UI framework, rather than doing everything manually.
+- I think it would have been better to work out a simple UI framework, rather than doing everything on a case-by-case basis.
 - I used a state machine for switching between the main menu, in flight, the space station menu, etc; this lead to issues down the line and I needed to create some singletons with awkward lifetimes because of it. A state-stack - which I have used in previous projects - would have been better. 
 - The challenge required me to stick with the style of the base project that was provided, I took this to mean that I should create abstract interfaces for audio and physics, as the base project had done for its systems. If I were making this project of my own volition I probably wouldn’t have done this, and used the time I saved to add more features.
 
