@@ -152,17 +152,17 @@ header .content {
   background-color: $hover-color;
 }
 
-figure {
+.quote {
   background-color: $quote-color;
+}
+
+figure {
   margin-inline: 15px;
+  display: flow-root;
 }
 
 blockquote {
   margin-inline: 15px;
-}
-
-figcaption {
-  margin: 5px;
 }
 
 .content pre, .content pre code {
@@ -174,4 +174,8 @@ figcaption {
 
 .highlight {
   overflow-x: visible !important;
+}
+
+pre {
+  margin-inline: 15px;
 }
