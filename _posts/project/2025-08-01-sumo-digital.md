@@ -10,6 +10,10 @@ sortby: a
 
 In August 2024 I embarked on a one-year work placement at Sumo Digital Sheffield. While at Sumo, I worked on two unannounced Unreal Engine projects.
 
+{::comment}
+More energy, more passion
+{:/comment}
+
 ## Production
 
 Across both projects, I worked with Sumo's production tools: Perforce (version control), Jira (task management), Swarm (code review), Unreal Game Sync (CI/CD). It took me a bit to adjust to code review, but I like coding standards and writing clean code (anything to reduce the infinite possible implementation options) so by the end of my placement I was managing to write stuff that usually required no changes.
@@ -21,17 +25,17 @@ I worked on Project D5 from August to December 2024. At the time it was unannoun
 
 During my time working on Project D5 I was on the Game Modes team. Project D5 is a party game and so supports a variety of game modes.
 
-I worked on multiple game modes, including: hide and seek, race, and infection. After I had become familiar the production processes and shown I could complete programming tasks without needing much oversight, I was given "ownership" over the hide and seek game mode which meant I was responsible for implementing all bug fixes and changes needed for it. Later I took on infection as well, when a change to the narrative required all the menus and game mode logic to be adjusted.
+I worked on multiple game modes. After I had become familiar the production processes and shown I could complete programming tasks without needing much oversight, I was given "ownership" over the one of the game modes which meant I was responsible for implementing all bug fixes and changes needed for it. Later I took on another, when a change to the narrative required all the menus and game mode logic to be adjusted.
 
-I contributed bug fixes, UI implementations, and gameplay tweaks where-ever they were needed under the purview of the game modes team. For example: distributing scores to players, changing how teams were assigned, and how the game mode transitions from through its various phases (e.g. countdown, gameplay, next round, flipping teams, etc.). I also implemented new gameplay actors that were needed.
+I contributed bug fixes, UI implementations, and gameplay tweaks where-ever they were needed under the purview of the game modes team. For example: distributing scores to players, changing how teams were assigned, and how the game mode transitions from through its various phases (e.g. countdown, gameplay, next round, flipping teams, etc). I also implemented new gameplay actors that were needed.
 
-One bugfix I'm quite proud of is an issue with incorrect trigger box behaviour which had been affecting every trigger box in the game for a while. Sumo has an internal library of UE utilities shared across projects, the trigger box implementation in this library was sometimes keeping actors in its internal overlapping actor list when they shouldn't be and this caused inconsistencies in "OnBeginOverlap" and "OnEndOverlap" events.
+I fixed an issue with incorrect trigger box behaviour which had been affecting every trigger box in the game for a while. Sumo has an internal library of UE utilities shared across projects, the trigger box implementation in this library was sometimes keeping actors in its internal overlapping actor list when they shouldn't be and this caused inconsistencies in "OnBeginOverlap" and "OnEndOverlap" events.
 
 {% include image.html url="/assets/images/project_d5.jpg" description="Screenshot from the public Project D5 Steam page" %}
 
 ## Unannounced Project
 
-I was given the opportunities to move to a different project in the new year, and I went for it because I wanted to get as much breadth of experience as I could while on my placement.
+I was given the opportunity to move to a different project in the new year, and I went for it because I wanted to get as wide a breadth of experience as I could while on my placement.
 
 On the new (to me) project, I joined the 3Cs team (character, camera and control). 
 My first responsibilities were implementing debug features for the character, including flying, teleporting, and logging inputs and character state into the Rewind Debugger. 
