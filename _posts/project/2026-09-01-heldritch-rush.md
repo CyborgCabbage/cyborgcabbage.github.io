@@ -18,6 +18,8 @@ I parted ways with the project in September 2026, so I'm writing the article as 
 
 ## Spline Rail System
 
+{% include image.html url="/assets/images/heldritch_spline.png" description="Section of rail with 3 Rail Point Actors, the spline can be easily edited" %}
+
 The first system I developed for the game was spline base movement (in an on rails shooter, the rail is kind of important). My work was based on a prototype by [Charlie Wake](https://www.linkedin.com/in/charlie-wake-6338142bb/), I rebuilt it from the ground up.
 
 The requirements were roughly as follows: 
@@ -37,7 +39,7 @@ I had to consider how to make the player move along the spline, I think there ar
 The method used in the original Heldritch Rush DARE game (I believe) was interpolating from point to point. 
 I elected to use pathfinding for the following reasons:
 - it is more in-line with how character movement conventionally works, and therefore is well-trodden ground in the engine and naturally integrates with physics and animation systems
-- the designer doesn't have to be overly precise with how they place spline points, because with pathfinding the player is garunteed to walk along the ground naturally
+- the designer doesn't have to be overly precise with how they place spline points, because with pathfinding the player is guaranteed to walk along the ground naturally
 
 Fortunately, Unreal provides a PathFollowingComponent which can be added to the player controller, making it quite easy to implement pathfinding based movement.
 
@@ -51,22 +53,45 @@ Rail points are attached to the rail actor, each spline point can have one rail 
 
 (the rail point sprite and text components are only included editor builds 😉)
 
+{% include image.html url="/assets/images/heldritch_outline_splines.png" description="Rail Actors and Rail Points in the outliner" %}
+
 Another important feature for usablity is that rail points don't need to be adjusted when spline points are added or removed. This was possible by using spline metadata to adjust the indices of the rail points automatically. I used [this guide](https://mintbanjo.com/articles/unreal-engine-5-spline-point-metadata/) to help with the spline metadata setup.
+
+TODO: GIF showing adding, repositioning, and removing spline points
 
 ### Events
 
 So, each rail point has a list of events but how do these work?
 
-I defined a parent class for all events, it has the functions:
-- OnRailEventBegin(...)
-- OnRailEventTick(...)
-- OnRailEventEnd(...)
+TODO I was inspired by the setup Enhanced Input uses for InputActions
+
+{% highlight cpp %}
+UCLASS(Blueprintable, Abstract, EditInlineNew, CollapseCategories)
+class HELDRITCHRUSH_API UHrRailEvent : public UObject
+{
+	GENERATED_BODY()
+public:
+	virtual UWorld* GetWorld() const override final;
+	void OnRailEventBegin(AHrGameplayPlayerController* Controller);
+	void OnRailEventTick(AHrGameplayPlayerController* Controller, float DeltaTime);
+	void OnRailEventEnd(AHrGameplayPlayerController* Controller);
+	UFUNCTION(BlueprintPure)
+	bool IsEndingEventInstantly() const;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Rail Event")
+	bool bStartsInstantlyEnded = false;
+protected:
+	// [...]
+};
+
+{% endhighlight %}
 
 (each of these can be overwritten in Blueprints, allowing new events to be scripted easily)
 
 When the player gets to a rail point, the player stops and processes the events in order. "Tick" is only called on the currently processed event.
 
 For events with a duration, they can call the protected function "EndRailEvent()". For events that are supposed to have no duration, there is a flag which when enabled causes an event to end instantly. When dealing with instant events, the system has will actually process multiple in the same tick. This is necessary to prevent the player from stopping briefly when they are not supposed to.
+
 An example series of events:
 - begin camera movement
 - start voice clip
@@ -74,22 +99,105 @@ An example series of events:
 - wait for 1 second
 In one tick, the first two events will executed and the enemies will be spawned. The wave event ends when all enemies have been killed, there would then be 1 second delay before the player moves on.
 
-{::comment}
+TODO: Image showing series of events in editor
 
-## Weapons System
+### Branching
 
-## Level Visibility
+A key feature we wanted compared with the original DARE game was the ability for the level designer to introduce a branch in player's path. When the player comes to one of these branches, they stop and press a key to select a direction. This is a system that took a bit of iteration to get right, but I believe I was able to come to a good design.
 
-### Room Cutout
+Firstly, the Unreal spline component doesn't support branching, you get one contiguous spline in each component. That being the case, I opted to have multiple Rail Actors to represent the different paths. This does introduce a minor problem: where the player should start in the level is now ambiguous. To solve this, each rail has a Boolean for specifying whether it is the spawn rail or not. In our game mode class, {% ihighlight cpp %} void RestartPlayer(AController* NewPlayer) {% endihighlight %} is overridden and the player is spawned at the start of the rail.
 
-### Hiding Floors
+{% highlight cpp %}
+void AHrGameplayGameMode::RestartPlayer(AController* NewPlayer)
+{
+    AHrRail* SpawnRail = nullptr;
+    for (TActorIterator<AHrRail> It(GetWorld()); It; ++It)
+    {
+        AHrRail* Rail = *It;
+        if (Rail && Rail->SplineComponent && Rail->SplineComponent->GetNumberOfSplinePoints() > 0)
+        {
+            if (Rail->bIsSpawnRail)
+            {
+                SpawnRail = Rail;
+                break;
+            }
+            if (SpawnRail == nullptr)
+            {
+                SpawnRail = Rail;
+            }
+        }
+    }
+    // [Then spawn player at SpawnRail if it is not nullptr]
+}
+{% endhighlight %}
 
-Overlap volumes are used to define which actor 
+Using the event system I set up before, I can add a branch event. It has a map of directions to destinations; when the event is triggered a UI widget is created to show the options and the player can select their target direction.
 
-## Input and User Interface
+There are three different types of destination: 
+- {% ihighlight cpp %}Continue{% endihighlight %} which simply lets the player continue on their current rail, past the branch event
+- {% ihighlight cpp %}RailAndIndex{% endihighlight %} where the designer specifies a target rail actor and a target spline index on that rail
+- {% ihighlight cpp %}RailPoint{% endihighlight %} where the designer specifies a target rail point
 
-Common UI
-Input rebinding
+{% ihighlight cpp %}EditConditionHides{% endihighlight %} is used so that only the relevant configuration variables are shown for each destination type.
 
-## Play Testing
-{:/comment}
+{% highlight cpp %}
+UENUM(BlueprintType)
+enum class EHrBranchDirection : uint8
+{
+	Up,
+	Down,
+	Left,
+	Right
+};
+
+UENUM(BlueprintType)
+enum class EHrBranchMode : uint8
+{
+	Continue,
+	RailAndIndex,
+	RailPoint
+};
+
+USTRUCT(BlueprintType)
+struct FHrBranchParameters
+{
+	GENERATED_BODY()
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	EHrBranchMode Mode = EHrBranchMode::Continue;
+	
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(EditCondition="Mode==EHrBranchMode::RailAndIndex", EditConditionHides))
+	AHrRail* RailActor = nullptr;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(EditCondition="Mode==EHrBranchMode::RailAndIndex", EditConditionHides))
+	int32 RailIndex = 0;
+	
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(EditCondition="Mode==EHrBranchMode::RailPoint", EditConditionHides))
+	AHrRailPoint* RailPoint = nullptr;
+};
+
+UCLASS(Abstract, Blueprintable)
+class HELDRITCHRUSH_API UHrBranchRailEvent : public UHrRailEvent
+{
+	GENERATED_BODY()
+
+public:
+	// [...]
+    
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(ForceInlineRow))
+	TMap<EHrBranchDirection, FHrBranchParameters> Branches;
+};
+{% endhighlight %}
+
+The branch event logic is mostly implemented in Blueprints, but a few functions are done in C++. This is probably not the great technical design, doing the class in Blueprints entirely makes for sense because rail events are more on the scripting side (simpler logic that is iterated often). I think I just like looking at written code more, to me it is more digestible, personal flaw of mine honestly.
+
+## The End
+
+Okay I'll leave it there for now; there are other systems I made or contributed to: the enemy spawning system, the weapons system, level visibility system, our input and user interface setup using Common UI, and more. 
+
+This post focuses on something I was the primary contributor for, but I'll also highlight my compatriots: 
+- [Cameron Baird](https://www.linkedin.com/in/cameron-baird02/) who worked on the project before me and has now out lasted me; he has done lots of stuff but in relation to this post he made the camera system which integrates with the rail system using a camera rail event.
+- [Kieran McDermott](https://www.linkedin.com/in/kieran-mcdermott-120924159/) who worked on weapon logic and made a rail event for the tutorial, along with a bunch of other bits and pieces across the project.
+- [Tanapat Somrid](https://www.linkedin.com/in/tanapat-somrid-265098204/) who started working on the project just after I left.
+
+And that's just the programmers! A more exhaustive list of everyone who works on Heldritch Rush can be found [here](https://slothdoctorgames.wixsite.com/game-developer-websi).
