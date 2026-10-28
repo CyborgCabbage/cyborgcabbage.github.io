@@ -15,9 +15,7 @@ In August 2024 I embarked on a one-year work placement at Sumo Digital Sheffield
 Across both projects, I worked with Sumo's production tools: Perforce (version control), Jira (task management), Swarm (code review), Unreal Game Sync (CI/CD). It took me a bit to adjust to code review, but I like coding standards and writing clean code (anything to reduce the infinite possible implementation options) so by the end of my placement I was managing to write stuff that usually required no changes.
 
 ## Project D5
-
-<img class="inline-image" src="/assets/images/project_d5_header.jpg">
-<div class="inline-caption">Header from the public Project D5 Steam page</div>
+{% include image.html url="/assets/images/project_d5_header.jpg" description="Header from the public Project D5 Steam page" %}
 
 I worked on Project D5 from August to December 2024. At the time it was unannounced, but fortunately it has since gone through [public beta testing](https://store.steampowered.com/app/3734070/Project_D5/), so I feel more able to talk about it in detail.
 
@@ -29,8 +27,7 @@ I contributed bug fixes, UI implementations, and gameplay tweaks where-ever they
 
 One bugfix I'm quite proud of is an issue with incorrect trigger box behaviour which had been affecting every trigger box in the game for a while. Sumo has an internal library of UE utilities shared across projects, the trigger box implementation in this library was sometimes keeping actors in its internal overlapping actor list when they shouldn't be and this caused inconsistencies in "OnBeginOverlap" and "OnEndOverlap" events.
 
-<img class="inline-image" src="/assets/images/project_d5.jpg">
-<div class="inline-caption">Screenshot from the public Project D5 Steam page</div>
+{% include image.html url="/assets/images/project_d5.jpg" description="Screenshot from the public Project D5 Steam page" %}
 
 ## Unannounced Project
 

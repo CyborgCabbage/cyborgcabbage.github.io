@@ -28,8 +28,7 @@ I used [Mesen](https://www.mesen.ca/), which is I believe the gold standard for 
 
 # Entering the Matrix
 
-<img class="inline-image" src="/assets/images/thematrix034.jpg">
-<div class="inline-caption">No UI/UX developers in the apocalypse apparently...</div>
+{% include image.html url="/assets/images/thematrix034.jpg" description="No UI designers in the apocalypse" %}
 
 A program called CC65 is used to compile 6502 assembly, it is also capable of compiling C code, but I wanted to use assembly language as a learning experience (and the C programming model doesn't fit the 6502 very well). One observation I'd like to make: though retro software development is often characterised as more "hardcore", in reality has time has marched on complexity has expanded in both directions. Higher level and easier languages become available, but at the same time, the lower levels have become more complicated, and the "stack" as a whole has become taller. 6502 assembly is closer to the hardware, but because the hardware is less complex than modern hardware I think it works out to about the same difficulty as something like C. The experience reminds me of graphics programming: there's more friction, and I had to adapt to a new mental model than what I use for C-like languages.
 
@@ -46,9 +45,7 @@ The NES uses cartridges, which means that some of the constraints an NES game is
 If I wanted to do more than one or two fights, perhaps even port the whole game (though I am not going to do that), I would need a much more capable cartridge. I think the most appropriate cartridge would probably be the [MMC3](https://www.nesdev.org/wiki/MMC3), it was used in Super Mario Bros. 3 and many other late NES games.
 
 # Graphics
-
-<img class="inline-image" style="image-rendering: pixelated;" src="/assets/images/charmap.png">
-<div class="inline-caption">The tile pattern table</div>
+{% include pixelart.html url="/assets/images/charmap.png" description="The tile pattern table" %}
 
 The NES uses 8x8 "characters", with a 4 colour palette. Put 256 of these together and you get a pattern table. On an NROM cartridge the 8K CHR ROM is divided into two pattern tables, one for sprites and one for tiles. The graphics for the de-make fit quite comfortably within one pattern table, so no special optimisation was necessary there.
 
@@ -66,7 +63,7 @@ I do think it would be possible to do the whole game, but I don't think that the
 
 {::comment}
 
-On the philosophy behind this kind of project I have some thoughts. I prefer other people to take the creative reigns of a project while I do the technical side, in a sense a demake supports that - the design and art are predetermined - but just because I don't want to be the designer doesn't mean I don't want there to be a designer. These kinds of projects - and fan-works and mods in general - are too me always stuck in a shadow, always limited. Fan works generally have to be non-commercial, and if I can't make money from something I need to be getting something out of it that is more self-actualisation. I need an unbounded potential to be there, to be possible, otherwise I don't see the point in carrying out the project.
+On the philosophy behind this kind of project I have some thoughts. I prefer other people to take the creative reigns of a project while I do the technical side, in a sense a de-make supports that - the design and art are predetermined - but just because I don't want to be the designer doesn't mean I don't want there to be a designer. These kinds of projects - and fan-works and mods in general - are too me always stuck in a shadow, always limited. Fan works generally have to be non-commercial, and if I can't make money from something I need to be getting something out of it that is more self-actualisation. I need an unbounded potential to be there, to be possible, otherwise I don't see the point in carrying out the project.
 
 De-making all of Undertale is possible (I think) but while I can withstand technical constraints I can't abide the intrinsic railroading on what the project has the potential to be (when I'm not getting paid, much easier to be enthusiastic if you're getting £19 an hour).
 

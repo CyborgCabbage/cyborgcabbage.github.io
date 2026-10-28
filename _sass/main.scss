@@ -1,6 +1,7 @@
 $bar-color: #004237;
 $bg-color: #0e0e0e;
 $text-color: #ffffff;
+$caption-color: #b8b8b8;
 $link-color: #d6fade;
 $hover-color: #7aff97;
 $quote-color: #ffffff11;
@@ -118,15 +119,16 @@ header .content {
   }
 }
 
-.inline-image {
+.image img {
   width: 100%; 
   display: block;
   margin: auto;
 }
 
-.inline-caption {
+.image figcaption {
   text-align: center;
   font-style: italic;
+  color: $caption-color;
 }
 
 .date {
@@ -178,4 +180,8 @@ blockquote {
 
 pre {
   margin-inline: 15px;
+}
+
+code {
+  text-justify: none;
 }
