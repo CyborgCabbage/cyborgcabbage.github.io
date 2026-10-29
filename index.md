@@ -57,13 +57,3 @@ I'd happily work with Finlay again in the future, and have no doubt he has a bri
     </p>
   </blockquote>
 </figure>
-
-<br>
-<details>
-  <summary>All Posts</summary>
-  <ul> 
-    {% for post in site.posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a> <span style="color: lightgrey; font-style: italic;">{{ post.date | date_to_string }}</span></li>
-    {% endfor %}
-  </ul>
-</details>

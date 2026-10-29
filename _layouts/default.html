@@ -11,6 +11,15 @@
     {% include header.html %}
     <main class="content">
       {{ content }}
+      <br>
+      <details>
+        <summary>All Posts</summary>
+        <ul> 
+          {% for post in site.posts %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a> <span style="color: lightgrey; font-style: italic;">{{ post.date | date_to_string }}</span></li>
+          {% endfor %}
+        </ul>
+      </details>
     </main>
     {% include footer.html %}
   </body>
