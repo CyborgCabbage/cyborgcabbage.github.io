@@ -57,13 +57,33 @@ Rail points are attached to the rail actor, each spline point can have one rail 
 
 Another important feature for usablity is that rail points don't need to be adjusted when spline points are added or removed. This was possible by using spline metadata to adjust the indices of the rail points automatically. I used [this guide](https://mintbanjo.com/articles/unreal-engine-5-spline-point-metadata/) to help with the spline metadata setup.
 
-TODO: GIF showing adding, repositioning, and removing spline points
+{% include video.html url="/assets/videos/heldritch_rail_update.mp4" description="Showing adding, repositioning, and removing spline points" %}
 
 ### Events
 
-So, each rail point has a list of events but how do these work?
+So, each rail point has a list of events but how do these work? I remembered the triggers and modifiers in the Input Mapping Context, they allow for the user to select from drop down of classes and then configure each one they instanced. This seemed like the perfect design for the event list.
 
-TODO I was inspired by the setup Enhanced Input uses for InputActions
+{% include image.html url="/assets/images/heldritch_input_mapping_context.png" description="Input Mapping Context, see the trigger array?" %}
+
+Looking at the engine code, this is accomplished by created a {% ihighlight cpp %}TArray{% endihighlight %} of a base class. The array also needs the {% ihighlight cpp %}UPROPERTY(Instanced){% endihighlight %}. This specifier causes the property editor to create new instances of a class instead of selecting from existing instances.
+
+{% highlight cpp %}
+UCLASS(NotPlaceable, PrioritizeCategories=("Rail"))
+class HELDRITCHRUSH_API AHrRailPoint : public AActor
+{
+	GENERATED_BODY()
+
+public:
+	// [...]
+	
+	UPROPERTY(EditInstanceOnly, Instanced, BlueprintReadOnly, Category = "Rail")
+	TArray<TObjectPtr<UHrRailEvent>> Events;
+
+	// [...]
+};
+{% endhighlight %}
+
+The base class of the rail event needs to have {% ihighlight cpp %}UCLASS(EditInlineNew){% endihighlight %} to be used with {% ihighlight cpp %}UPROPERTY(Instanced){% endihighlight %}. 
 
 {% highlight cpp %}
 UCLASS(Blueprintable, Abstract, EditInlineNew, CollapseCategories)
@@ -81,25 +101,28 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Rail Event")
 	bool bStartsInstantlyEnded = false;
 protected:
-	// [...]
+	// [Blueprint and native versions of event functions]
+	UFUNCTION(BlueprintCallable)
+	void EndRailEvent();
 };
 
 {% endhighlight %}
 
-(each of these can be overwritten in Blueprints, allowing new events to be scripted easily)
+When the player gets to a rail point, the player stops and processes the events in order.
+The begin, tick, and end functions contain a rail events logic. These can be easily overridden in Blueprints to script new types of rail event. Events can either be instant or have a duration
+Events with a duration call the protected function "EndRailEvent()" to end. Events that have are instant enabled the flag {% ihighlight cpp %}bStartsInstantlyEnded{% endihighlight %}. 
 
-When the player gets to a rail point, the player stops and processes the events in order. "Tick" is only called on the currently processed event.
+When processing instant events, the Player Controller will process multiple in the same tick. This is necessary to prevent the player from stopping for a tick, and it guarantees multiple instant event effects will all be applied in the same tick.
 
-For events with a duration, they can call the protected function "EndRailEvent()". For events that are supposed to have no duration, there is a flag which when enabled causes an event to end instantly. When dealing with instant events, the system has will actually process multiple in the same tick. This is necessary to prevent the player from stopping briefly when they are not supposed to.
+For example, a series of events may go something like this:
+- Begin camera movement
+- Start voice clip
+- Spawn enemy wave
+- Wait for 1 second
 
-An example series of events:
-- begin camera movement
-- start voice clip
-- spawn enemy wave
-- wait for 1 second
 In one tick, the first two events will executed and the enemies will be spawned. The wave event ends when all enemies have been killed, there would then be 1 second delay before the player moves on.
 
-TODO: Image showing series of events in editor
+{% include image.html url="/assets/images/heldritch_rail_events.png" description="Series of rail events in inspector" %}
 
 ### Branching
 

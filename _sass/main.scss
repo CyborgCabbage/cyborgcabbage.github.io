@@ -119,13 +119,13 @@ header .content {
   }
 }
 
-.image img {
+.image img, .video video {
   max-width: 100%;
   display: block;
   margin: auto;
 }
 
-.image figcaption {
+figcaption {
   text-align: center;
   font-style: italic;
   color: $caption-color;
