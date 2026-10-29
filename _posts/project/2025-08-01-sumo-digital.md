@@ -8,11 +8,9 @@ sortby: a
 
 [ensure]: {% post_url /blog/2026-10-23-ensure %}
 
-In August 2024 I embarked on a one-year work placement at Sumo Digital Sheffield. While at Sumo, I worked on two unannounced Unreal Engine projects.
+In August 2024, I embarked on a one-year work placement at Sumo Digital Sheffield. While at Sumo, I worked on two unannounced Unreal Engine projects. 
 
-{::comment}
-More energy, more passion
-{:/comment}
+Reflecting on my time at Sumo, I am very grateful for the opportunity I was given when placements like these are so scarce in the industry. I got experience in AAA game development processes and was able to develop my skills in Unreal Engine, gameplay programming, writing documentation, systems programming, UI programming... everything basically! I got to collaborate with skilled people from across disciplines, and I started thinking more about what my work could enable others to do.
 
 ## Production
 
@@ -46,8 +44,8 @@ I was also tasked with creating a system for enabling and disabling player abili
 
 ## Reflection
 
-Reflecting on my time at Sumo, I am very grateful for the opportunity I was given when placements like these are so scarce in the industry. I got experience in AAA game development processes and was able to develop my skills in Unreal Engine, gameplay programming, writing documentation, systems programming, UI programming... everything basically! I got to collaborate with skilled people from across disciplines, and I started thinking more about what my work could enable others to do.
+I found that I was able to rise to the challenges I encountered at Sumo, but there are still some things I need to work on if I want to advance in my career.
 
-Something I intend to do differently in the future is take more initiative, other than fixing bugs I found I tended to stay "on task". Broadly, staying on task is a good thing, but there were opportunities to contribute in a broader way which I overlooked in favour of doing what was in front of me. An example of something I was thinking about and could have taken initiative on is [the assert situation in Unreal][ensure].
+Something I intend to do differently in the future is take more initiative. While at Sumo, I really focused on completing Jira tasks. Broadly, staying focused is a good thing, but if I want to grow as a games programmer I need to have a bit more independence. An example of something I was thinking about and could have taken initiative on is [the assert situation in Unreal][ensure].
 
 Another point I've been thinking a lot about is note taking, I did not make any personal record of what I was doing while at Sumo so now it is difficult to remember many of the details. Writing this page is in-part practice for taking better notes at my next position. [Tim Cain](https://www.youtube.com/watch?v=P0NKR9R0XTg) (the creator of Fallout) took lots of notes throughout his career and is able to tell so many stories, I really want to be in that position in the future.
