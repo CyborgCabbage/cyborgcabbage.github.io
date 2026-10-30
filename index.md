@@ -22,7 +22,6 @@ title: Home
 [qr]: {% post_url /project/2026-05-09-honours %}
 [heldritch]: {% post_url /project/2026-09-01-heldritch-rush %}
 [risingstar]: {% post_url /project/2024-01-24-aurionnaut %}
-[ensure]: {% post_url /blog/2026-10-23-ensure %}
 
 # Hi, It's Me, Finlay
 My interest in programming and game development began early, first with GameMaker and then with Python and C++ in high school in Edinburgh. This culminated in me entering the Computer Games Technology course at Abertay. 
@@ -35,14 +34,14 @@ Some games that inspire me today are: Outer Wilds, Deltarune, Tunic, and the Hal
 
 ## Unreal Engine 5
 Unreal Engine 5 is the platform with which I have the most experience. 
-I worked with it professionally at [Sumo][sumo] for a year, working on multiplayer networking, UI logic, and gameplay systems. 
-Outside of work, we used it at Abertay to create [Braise Satan][braise]. During my final year of university, I continued to use Unreal Engine for the development of [Heldritch Rush][heldritch], where I worked on all areas of game programming.
+I worked with it professionally at Sumo for a year, working on multiplayer networking, UI logic, and gameplay systems. 
+Outside of work, we used it at Abertay to create Braise Satan. During my final year of university, I continued to use Unreal Engine for the development of Heldritch Rush, where I worked on all areas of game programming.
 ## C++
 C++ has been my language of choice throughout my programming journey. 
 I started using it in high school and have continued to hone my skills with it through university and my placement.
 If you want to see some of my code, [look here](https://github.com/CyborgCabbage/yournespal).
 ## Collaboration
-I have experience working in a large and small teams. I really enjoyed my first collaborative experience working on [Braise Satan][braise] in a team of 8, and I was also fortunate to work in larger team of around 70 at [Sumo][sumo].
+I have experience working in a large and small teams. I really enjoyed my first collaborative experience working on Braise Satan in a team of 8, and I was also fortunate to work in larger team of around 70 at Sumo.
 
 <figure class="quote">
   <blockquote>
