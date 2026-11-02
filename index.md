@@ -40,8 +40,10 @@ Outside of work, we used it at Abertay to create Braise Satan. During my final y
 C++ has been my language of choice throughout my programming journey. 
 I started using it in high school and have continued to hone my skills with it through university and my placement.
 If you want to see some of my code, [look here](https://github.com/CyborgCabbage/yournespal).
+## Other Experience
+I have experience with a few other programming languages, most recently I used TypeScript heavily for my honours project. I think I am pretty adaptable to different tools, I'm confident in my core programming and learning skills.
 ## Collaboration
-I have experience working in a large and small teams. I really enjoyed my first collaborative experience working on Braise Satan in a team of 8, and I was also fortunate to work in larger team of around 70 at Sumo. 
+I have experience working in a large and small teams. I really enjoyed my first collaborative experience working on Braise Satan in a team of 8, and I was also fortunate to work in larger team of around 70 at Sumo. Working with others is big motivating factor for me.
 
 <figure class="quote">
   <blockquote>
