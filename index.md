@@ -28,7 +28,7 @@ My interest in programming and game development began early, first with GameMake
 
 I have made mods, participated in game jams, the Grads in Games [Rising Star Programming challenge][risingstar], and Abertay's [DARE Academy][braise]. From 2024 to 25 I worked as a Placement Programmer at [Sumo Digital][sumo], and from 2025 to 26 I went back to university to [finish my degree][qr] while working on [Heldritch Rush][heldritch] in the background. 
 
-Today I'm based in Dundee and looking for a job, either remote or local.
+Today, I'm based in Dundee and looking for a games programming or other software engineering role, either remote or local.
 
 Some games that inspire me today are: Outer Wilds, Deltarune, Tunic, and the Half-Life series.
 
@@ -41,7 +41,7 @@ C++ has been my language of choice throughout my programming journey.
 I started using it in high school and have continued to hone my skills with it through university and my placement.
 If you want to see some of my code, [look here](https://github.com/CyborgCabbage/yournespal).
 ## Collaboration
-I have experience working in a large and small teams. I really enjoyed my first collaborative experience working on Braise Satan in a team of 8, and I was also fortunate to work in larger team of around 70 at Sumo.
+I have experience working in a large and small teams. I really enjoyed my first collaborative experience working on Braise Satan in a team of 8, and I was also fortunate to work in larger team of around 70 at Sumo. 
 
 <figure class="quote">
   <blockquote>
