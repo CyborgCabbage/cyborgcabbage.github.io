@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Undertale for the NES
+tag: lowlight
+image: /assets/images/thumb_undertale.png
 ---
 The date on the post is when the project was completed in 2021, but this post is being written in 2026.
 

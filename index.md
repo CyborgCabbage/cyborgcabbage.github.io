@@ -58,3 +58,18 @@ I'd happily work with Finlay again in the future, and have no doubt he has a bri
     </p>
   </blockquote>
 </figure>
+
+# Other Projects
+{::nomarkdown}
+<div class="box">
+{% assign posts = site.posts | where_exp: "item", "item.tags contains 'lowlight'" %}
+{% for post in posts limit:3 %}
+<div class="entry">
+<a href="{{ post.url }}">
+<img src="{{ post.image }}" width=240 height=160 />
+<h2>{{ post.title }}<h2>
+</a>
+</div>
+{% endfor %}
+</div>
+{:/nomarkdown}

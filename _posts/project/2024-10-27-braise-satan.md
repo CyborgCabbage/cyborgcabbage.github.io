@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Braise Satan
+tag: lowlight
 image: /assets/images/thumb_braise_satan.jpg
 ---
 {% youtube "https://www.youtube.com/watch?v=NZhl5vbofhI" %}
