@@ -141,17 +141,19 @@ figcaption {
 	display: none;
 }
 
-#header-download {
-  background-color: $link-color;
+.button-link {
+  background-color: $hover-color;
   color: $bar-color;
-  margin: 0;
+  margin: 6px;
   padding: 0 0.3em;
   font-size: 130%;
   border-radius: 7px;
   text-decoration: none;
+  display: inline flow-root;
 }
-#header-download:hover {
-  background-color: $hover-color;
+.button-link:hover {
+  background-color: $link-color;
+  color: $bar-color;
 }
 
 .quote {

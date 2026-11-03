@@ -8,13 +8,17 @@ The date on the post is when the project was completed in 2021, but this post is
 
 {% youtube "https://www.youtube.com/watch?v=YcA3_L7Kndo" %}
 
-[Undertale for NES cart download]({{ site.url }}/assets/downloads/undertale-nes/napstablook.nes)
-
 # Intro
 
 Back during lock-down I became interested retro game development and ended up making a little demo, a fight from the indie-game [Undertale](https://undertale.com/) remade (or "de-made") to work on the NES.
 
 It’s not a huge project, but I had fun learning 6502 assembler and the quirks of the NES.
+
+# Download
+
+The cart should run with any NES emulator (or even on original hardware with a flash cart, I haven't been able to test it though).
+
+[→ Download NES Cart]({{ site.url }}/assets/downloads/undertale-nes/napstablook.nes){:.button-link}
 
 # Resources
 
