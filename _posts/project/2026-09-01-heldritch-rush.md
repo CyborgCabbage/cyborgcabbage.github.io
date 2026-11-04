@@ -55,7 +55,7 @@ Rail points are attached to the rail actor, each spline point can have one rail 
 
 {% include image.html url="/assets/images/heldritch_outline_splines.png" description="Rail Actors and Rail Points in the outliner" %}
 
-Another important feature for usablity is that rail points don't need to be adjusted when spline points are added or removed. This was possible by using spline metadata to adjust the indices of the rail points automatically in response to edit events. I used [this guide](https://mintbanjo.com/articles/unreal-engine-5-spline-point-metadata/) to help with the spline metadata setup.
+Another important feature for usablity is that rail points don't need to be adjusted when spline points are added or removed. This was possible by using spline metadata to adjust the indices of the rail points automatically in response to edit events. I used [this guide](https://mintbanjo.com/articles/unreal-engine-5-spline-point-metadata/) to help with the spline metadata setup. {% ihighlight cpp %}UObject::Modify(){% endihighlight %} is called on rail points that are updated, so that they are included in undo/redo transactions.
 
 {% include video.html url="/assets/videos/heldritch_rail_update.mp4" description="Showing adding, repositioning, and removing spline points" %}
 
