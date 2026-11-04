@@ -3,19 +3,7 @@ layout: default
 title: Home
 ---
 
-{::nomarkdown}
-<div class="box">
-{% assign posts = site.posts | where_exp: "item", "item.tags contains 'highlight'" | sort: "sortby"  %}
-{% for post in posts limit:3 %}
-<div class="entry">
-<a href="{{ post.url }}">
-<img src="{{ post.image }}" width=240 height=160 />
-<h2>{{ post.title }}<h2>
-</a>
-</div>
-{% endfor %}
-</div>
-{:/nomarkdown}
+{% include post-selection.html tag='highlight' %}
 
 [sumo]: {% post_url /project/2025-08-01-sumo-digital %}
 [braise]: {% post_url /project/2024-10-27-braise-satan %}
@@ -60,16 +48,4 @@ I'd happily work with Finlay again in the future, and have no doubt he has a bri
 </figure>
 
 # Other Projects
-{::nomarkdown}
-<div class="box">
-{% assign posts = site.posts | where_exp: "item", "item.tags contains 'lowlight'" %}
-{% for post in posts limit:3 %}
-<div class="entry">
-<a href="{{ post.url }}">
-<img src="{{ post.image }}" width=240 height=160 />
-<h2>{{ post.title }}<h2>
-</a>
-</div>
-{% endfor %}
-</div>
-{:/nomarkdown}
+{% include post-selection.html tag='lowlight' %}
