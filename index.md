@@ -3,14 +3,10 @@ layout: default
 title: Home
 ---
 
-{% include post-selection.html tag='highlight' %}
-
-[sumo]: {% post_url /project/2025-08-01-sumo-digital %}
-[braise]: {% post_url /project/2024-10-27-braise-satan %}
-[qr]: {% post_url /project/2026-05-09-honours %}
-[heldritch]: {% post_url /project/2026-09-01-heldritch-rush %}
-[risingstar]: {% post_url /project/2024-01-24-aurionnaut %}
-
+<div id="bio-panel" markdown="1">
+<div id="bio">
+<img src="/assets/images/me.jpg">
+<section markdown="1">
 # Hi, It's Me, Finlay
 My interest in programming and game development began early, first with GameMaker and then with Python and C++ in high school in Edinburgh. This culminated in me entering the Computer Games Technology course at Abertay. 
 
@@ -19,6 +15,19 @@ I have made mods, participated in game jams, the Grads in Games [Rising Star Pro
 I'm currently based in Dundee and looking for a games programming or other software engineering role, either remote or local.
 
 Some games that inspire me today are: Outer Wilds, Deltarune, Tunic, and the Half-Life series.
+</section>
+</div>
+[⇓ Download CV ⇓](assets/downloads/about/FinlayLaidlaw_CV.pdf){:.button-link}
+</div>
+
+{% include post-selection.html tag='highlight' %}
+
+[sumo]: {% post_url /project/2025-08-01-sumo-digital %}
+[braise]: {% post_url /project/2024-10-27-braise-satan %}
+[qr]: {% post_url /project/2026-05-09-honours %}
+[heldritch]: {% post_url /project/2026-09-01-heldritch-rush %}
+[risingstar]: {% post_url /project/2024-01-24-aurionnaut %}
+
 
 ## Unreal Engine 5
 Unreal Engine 5 is the platform with which I have the most experience. 
