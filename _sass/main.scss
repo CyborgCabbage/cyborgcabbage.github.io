@@ -74,40 +74,12 @@ header .content {
   text-align: center;
 }
 
+footer {
+  padding: 1rem;
+}
 
 .centred {
   text-align: center;
-}
-
-.entry img {
-  display: block;
-  margin: auto;
-}
-
-.entry {
-  flex: 1 1 0;
-}
-
-.box {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: start;
-  gap: 0.6rem;
-}
-
-.box a {
-  text-decoration: none;
-}
-
-@media screen and (width < 820px) {
-  .box {
-    flex-direction: column;
-    align-items: center;
-  }
-  .entry {
-    flex: auto;
-  }
 }
 
 .image img, .video video {
@@ -241,7 +213,7 @@ code {
 #skills section {
   flex-grow: 1;
   flex-basis: 0;
-  max-width: 50ch;
+  max-width: 80ch;
 }
 
 @media screen and (width < 720px) {
@@ -249,5 +221,46 @@ code {
     flex-direction: column;
     justify-content: flex-start;
     gap: 0;
+  }
+}
+
+/* Featured project */
+
+.project-panel:nth-child(even) {
+  background-color: hsla(0, 0%, 30%, 0.4);
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.project-panel:nth-child(odd) {
+  background-color: hsla(0, 0%, 20%, 0.4);
+}
+
+.project-panel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.project-panel img {
+  width: min(360px, 100%);
+}
+
+.project-panel section {
+  flex-grow: 1;
+  max-width: 80ch;
+}
+
+@media screen and (width < 1000px) {
+  .project-panel {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 0;
+  }
+  .project-panel section {
+    width: min(360px, 100%);
+    text-align: left;
   }
 }

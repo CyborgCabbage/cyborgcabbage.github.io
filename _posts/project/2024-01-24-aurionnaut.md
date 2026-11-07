@@ -1,8 +1,9 @@
 ---
 layout: post
 title: AURIONNAUT
-tag: lowlight
+tag: highlight
 image: /assets/images/thumb_aurionnaut.png
+sortby: e
 ---
 
 {% youtube "https://www.youtube.com/watch?v=GGP0daoy_pI" %}

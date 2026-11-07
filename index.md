@@ -56,5 +56,15 @@ I'd happily work with Finlay again in the future, and have no doubt he has a bri
 </figure>
 </div>
 
-{% include post-selection.html tag='highlight' %}
-{% include post-selection.html tag='lowlight' %}
+<div id="project-list">
+{% assign posts = site.posts | where_exp: "item", "item.tags contains 'highlight'" | sort: "sortby"  %}
+{% for post in posts %}
+<div class="project-panel">
+<img src="{{ post.image }}" />
+<section markdown="1">
+## {{ post.title }}
+[Go to project page]({{ post.url }})
+</section>
+</div>
+{% endfor %}
+</div>
