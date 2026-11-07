@@ -3,6 +3,12 @@ layout: default
 title: Home
 ---
 
+[sumo]: {% post_url /project/2025-08-01-sumo-digital %}
+[braise]: {% post_url /project/2024-10-27-braise-satan %}
+[qr]: {% post_url /project/2026-05-09-honours %}
+[heldritch]: {% post_url /project/2026-09-01-heldritch-rush %}
+[risingstar]: {% post_url /project/2024-01-24-aurionnaut %}
+
 <div id="bio-panel" markdown="1">
 <div id="bio">
 <img src="/assets/images/me.jpg">
@@ -20,15 +26,9 @@ Some games that inspire me today are: Outer Wilds, Deltarune, Tunic, and the Hal
 [⇓ Download CV ⇓](assets/downloads/about/FinlayLaidlaw_CV.pdf){:.button-link}
 </div>
 
-{% include post-selection.html tag='highlight' %}
-
-[sumo]: {% post_url /project/2025-08-01-sumo-digital %}
-[braise]: {% post_url /project/2024-10-27-braise-satan %}
-[qr]: {% post_url /project/2026-05-09-honours %}
-[heldritch]: {% post_url /project/2026-09-01-heldritch-rush %}
-[risingstar]: {% post_url /project/2024-01-24-aurionnaut %}
-
-
+<div id="skills-panel">
+<div id="skills">
+<section markdown="1">
 ## Unreal Engine 5
 Unreal Engine 5 is the platform with which I have the most experience. 
 I worked with it professionally at Sumo for a year, working on multiplayer networking, UI logic, and gameplay systems. 
@@ -37,24 +37,24 @@ Outside of work, we used it at Abertay to create Braise Satan. During my final y
 C++ has been my language of choice throughout my programming journey. 
 I started using it in high school and have continued to hone my skills with it through university and my placement.
 If you want to see some of my code, [look here](https://github.com/CyborgCabbage/yournespal).
+</section>
+<section markdown="1">
 ## Other Experience
 I have experience with a few other programming languages, most recently I used TypeScript heavily for my honours project. I am adaptable to different tools, I'm confident in my core programming and learning skills.
 ## Collaboration
 I have experience working in a large and small teams. I really enjoyed my first collaborative experience working on Braise Satan in a team of 8, and I was also fortunate to work in larger team of around 70 at Sumo. Working with others is big motivating factor for me.
-
+</section>
+</div>
 <figure class="quote">
-  <blockquote>
-    <p>
+<blockquote markdown="1">
 Finlay is a fantastic programmer to work with. He's got a great attitude, is extremely fast and capable at prototyping, and isn't afraid to speak up and make suggestions to improve the features he is working on. He's also really engaged and delivers work extremely quickly. 
-    </p>
-    <p>
-I'd happily work with Finlay again in the future, and have no doubt he has a bright future ahead of him in the games industry.
-    </p>
-    <p>
-—Thomas Chase, Senior Principle 3Cs Designer at Sumo Digital Sheffield
-    </p>
-  </blockquote>
-</figure>
 
-# Other Projects
+I'd happily work with Finlay again in the future, and have no doubt he has a bright future ahead of him in the games industry.
+
+  —Thomas Chase, Senior Principle 3Cs Designer at Sumo Digital Sheffield
+</blockquote>
+</figure>
+</div>
+
+{% include post-selection.html tag='highlight' %}
 {% include post-selection.html tag='lowlight' %}
