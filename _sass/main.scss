@@ -35,14 +35,10 @@ body {
 
 .content {
   width: 100%;
-  max-width: 80ch;
-  margin: 0 auto;
+  max-width: 1280px;
+  margin: 1rem auto;
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-main {
-  padding: 1rem;
 }
 
 a {
@@ -58,19 +54,9 @@ a:hover {
 
 header, footer {
   background-color: $bar-color;
-  min-height: 3em;
   background-image: url("/assets/images/bg_bar.png");
   background-blend-mode: multiply;
   background-repeat: repeat;
-}
-
-header, footer, main {
-  padding: 1em;
-}
-
-header h1 {
-  margin: 0;
-  margin-bottom: 0.2em;
 }
 
 #header-name {
@@ -79,11 +65,8 @@ header h1 {
 }
 
 header .content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  text-align: center;
 }
-
 .centred {
   text-align: center;
 }
