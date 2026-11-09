@@ -60,10 +60,13 @@ I'd happily work with Finlay again in the future, and have no doubt he has a bri
 {% assign posts = site.posts | where_exp: "item", "item.tags contains 'highlight'" | sort: "sortby"  %}
 {% for post in posts %}
 <div class="project-panel">
+<section class="project-thumbnail">
 <img src="{{ post.image }}" />
-<section markdown="1">
-## {{ post.title }}
-[Go to project page]({{ post.url }})
+<h1>{{ post.title }}</h1>
+<a href="{{ post.url }}">Go to project page</a>
+</section>
+<section markdown="1" class="project-summary">
+{{ post.summary }}
 </section>
 </div>
 {% endfor %}

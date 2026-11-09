@@ -6,9 +6,14 @@ $link-color: #d6fade;
 $hover-color: #7aff97;
 $quote-color: #ffffff11;
 
-
 * {
   box-sizing: border-box;
+}
+
+ul { 
+  list-style-type: " ‣ ";
+  list-style-position: inside;
+  padding-left: 0;
 }
 
 html {
@@ -227,8 +232,8 @@ code {
 
 .project-panel:nth-child(even) {
   background-color: hsla(0, 0%, 30%, 0.4);
-  flex-direction: row-reverse;
-  text-align: right;
+  /*flex-direction: row-reverse;*/
+  /*text-align: right;*/
 }
 
 .project-panel:nth-child(odd) {
@@ -238,18 +243,25 @@ code {
 .project-panel {
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   gap: 1rem;
   padding: 1rem;
-}
-
-.project-panel img {
-  width: min(360px, 100%);
-}
-
-.project-panel section {
-  flex-grow: 1;
-  max-width: 80ch;
+  img {
+    width: 360px;
+  }
+  .project-summary {
+    text-align: left;
+    h1 {
+      font-size: large;
+    }
+    h2 {
+      font-size: medium;
+      font-weight: normal;
+    }
+    p, li {
+      font-size: small;
+    }
+  }
 }
 
 @media screen and (width < 1000px) {
@@ -257,9 +269,12 @@ code {
     flex-direction: column !important;
     align-items: center;
     gap: 0;
-  }
-  .project-panel section {
-    width: min(360px, 100%);
-    text-align: left;
+    section {
+      width: min(360px, 100%);
+      text-align: left;
+    }
+    img {
+      width: 100%;
+    }
   }
 }

@@ -4,6 +4,32 @@ title: Heldritch Rush
 tag: highlight
 image: /assets/images/thumb_heldritch.png
 sortby: b
+summary: |-
+ # Unreal Engine 5 C++ Programmer
+ * Set technical direction for Unreal Engine 5 project
+ * Manage tasks, assist, and review work of other programmers
+ * Program in C++ and Blueprints, creating Blueprint APIs for myself and others
+
+ ## Input and UI
+ * Develop input and UI system using Common UI and Enhanced Input
+ * Create custom Slate widget for input rebinding interface
+ * Support KBM and gamepad, with input rebinding
+
+ ## AI & Navigation
+ * Create State Trees for ranged and melee enemies
+ * Modify State Tree Component to pull enemy configuration from a Data Table
+ * Create centralised enemy positioning system using Environmental Queries
+ 
+ ## Animation Blueprints & Materials
+ * Implement Animation Blueprint for main character, blending locomotion and combat animations
+ * Use Chooser to switch between weapon animations
+ * Program custom materials for animated lights
+
+ ## Tools
+ * Create Unreal Engine 5 tools with a focus on ease-of-use for designers
+ * Insert loadout configuration menu in editor using Unreal's Menu Extensions
+ * Create spline-locomotion system for an on-rails shooter, including locational event system
+ * Make enemy and weapon values driven by Data Tables
 ---
 
 {% youtube "https://www.youtube.com/watch?v=evr0UuN-tJI" %}
