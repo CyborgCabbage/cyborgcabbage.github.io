@@ -8,12 +8,11 @@ $quote-color: #ffffff11;
 
 
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
   height: 100%;
-  box-sizing: border-box;
   background-color: $bg-color;
   color: $text-color;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
