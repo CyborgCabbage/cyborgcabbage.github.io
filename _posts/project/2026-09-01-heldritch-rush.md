@@ -3,9 +3,10 @@ layout: post
 title: Heldritch Rush
 tag: highlight
 image: /assets/images/thumb_heldritch.png
+background: /assets/images/heldritch_spline.png
 sortby: b
 summary: |-
- # Unreal Engine 5 C++ Programmer
+ # Unreal Engine 5 Programmer
  * Set technical direction for Unreal Engine 5 project
  * Manage tasks, assist, and review work of other programmers
  * Program in C++ and Blueprints, creating Blueprint APIs for myself and others

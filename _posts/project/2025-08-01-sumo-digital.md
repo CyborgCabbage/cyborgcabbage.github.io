@@ -3,22 +3,24 @@ layout: post
 tag: highlight
 title: Sumo Digital Placement (1 year)
 image: /assets/images/thumb_sumo.png
+background: /assets/images/project_d5.jpg
 sortby: a
 summary: |-
- # General Production
- * Join projects in-development to provide programming support
+ # Placement Programmer
+ * Join projects in-development to provide additional programming support to teams
+ * Program for Unreal Engine 5 using C++ and Blueprints
  * Use Jira for task management and Miro for creating documentation
  * Use Swarm for code review
  * Use Perforce with UGS for source control
 
- # Project D5 (Gamemodes Team)
+ ## Project D5 (Gamemodes Team)
  * Join game modes team: implementing features, fixing bugs, owning and maintaining systems
  * Fix bugs affecting gamemodes, including UI, networking, and Game Ability System related
  * Implement new gameplay features based on requests or specifications
  * Fix bugs and complete tasks listed in Jira without needing additional support
  * Own two gamemodes, fixing bugs and implementing new features as required
  
- # Unannounced Unreal Engine 5 Project (3Cs Team)
+ ## Unannounced Unreal Engine 5 Project (3Cs Team)
  * Join the 3Cs team TODO
  * Work with Unreal's Mover system to implement player character locomotion
  * Implement locomotion debugging visualisations with Rewind Debugger and line drawing

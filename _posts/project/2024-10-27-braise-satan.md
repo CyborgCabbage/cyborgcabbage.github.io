@@ -3,7 +3,19 @@ layout: post
 title: Braise Satan
 tag: highlight
 image: /assets/images/thumb_braise_satan.jpg
+background: /assets/images/braise_satan_hell.png
 sortby: d
+summary: |-
+ # Unreal Engine 5 Programmer
+ * Collaborate with designers, producers, and artists to create a game
+ * Program a first-person cooking game in Unreal Engine 5, from initial concept to EGX stand and (non-commercial) Steam release
+ * Use C++ and Blueprints to implement features
+ * Implement physics based item interaction and item snapping system
+ * Manage game state through rounds
+ * Implement cooking mechanics: chopping (skill check), cooking, frying, and mincing
+ * Implement tutorial with object highlighting and NPC dialogue system
+ * Create custom C++ latent Blueprint Node to ease tutorial creation
+ * Implement controller support, including aim-assist for item interaction
 ---
 {% youtube "https://www.youtube.com/watch?v=NZhl5vbofhI" %}
 

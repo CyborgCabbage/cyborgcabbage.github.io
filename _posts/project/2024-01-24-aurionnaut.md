@@ -3,7 +3,20 @@ layout: post
 title: AURIONNAUT
 tag: highlight
 image: /assets/images/thumb_aurionnaut.png
+background: /assets/images/aurionnaut_combat.png
 sortby: e
+summary: |-
+ # Developer
+ * Participate in Grads in Games Rising Star Programming challenge
+ * Extend existing DirectX and Windows API based framework
+ * Implement font and UI rendering using DirectXTK
+ * Implement instanced rendering for particles
+ * Integrate PhysX into an existing framework
+ * Implement audio support with SFX and music support
+ * Create abstract interfaces to isolate underlying implementation
+ * Implement procedurally generated trading market using Perlin noise
+ * Create enemy ship AI with (6DoF)
+
 ---
 
 {% youtube "https://www.youtube.com/watch?v=GGP0daoy_pI" %}

@@ -3,7 +3,15 @@ layout: post
 title: Undertale for the NES
 tag: highlight
 image: /assets/images/thumb_undertale.png
+background: /assets/images/thumb_undertale.png
 sortby: f
+summary: |-
+ # Developer
+ * Port a fight from Undertale to the NES
+ * Program a demo in 6502 assembly
+ * Create sprite and game state machine to organise game logic
+ * Convert pixel art graphics to be compliant with NES constraints
+ * Integrate sound engine for fight music
 ---
 The date on the post is when the project was completed in 2021, but this post is being written in 2026.
 
