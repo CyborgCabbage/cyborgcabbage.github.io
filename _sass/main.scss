@@ -204,8 +204,8 @@ code {
   gap: 1rem;
   padding: 0 1rem;
   /*Border rounding*/
-  border-bottom-right-radius: (100vw - 960px) / 2;
-  border-bottom-left-radius: (100vw - 960px) / 2;
+  border-bottom-right-radius: min(160px, (100vw - 960px) / 2);
+  border-bottom-left-radius: min(160px, (100vw - 960px) / 2);
 }
 
 #skills {
