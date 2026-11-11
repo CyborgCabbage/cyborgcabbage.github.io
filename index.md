@@ -13,39 +13,82 @@ title: Home
 <div id="bio">
 <img src="/assets/images/me.jpg">
 <section markdown="1">
-# Hi, It's Me, Finlay
-My interest in programming and game development began early, first with GameMaker and then with Python and C++ in high school in Edinburgh. This culminated in me entering the Computer Games Technology course at Abertay. 
 
-I have made mods, participated in game jams, the Grads in Games [Rising Star Programming challenge][risingstar], and Abertay's [DARE Academy][braise]. From 2024 to 25 I worked as a Placement Programmer at [Sumo Digital][sumo], and from 2025 to 26 I went back to university to [finish my degree][qr] while working on [Heldritch Rush][heldritch] in the background. 
+# Hi, I'm Finlay
+I'm a games programmer who believes in writing clean code and making my code *work* for others. I enjoy making good tools, fixing tricky bugs, finding new methods, and working with other skilled professionals to bring ideas into reality.
 
-I'm currently based in Dundee and looking for a games programming or other software engineering role, either remote or local.
+I am confident in my C++ and Unreal Engine 5 skills, with professional experience at Sumo Digital and 1st class honours in BSc (Hons) Computer Games Technology at Abertay. I have made mods, participated in game jams, the Grads in Games Rising Star Programming challenge, and Abertay’s DARE Academy.
 
-Some games that inspire me today are: Outer Wilds, Deltarune, Tunic, and the Half-Life series.
+I like indie games, reading sci-fi/fantasy, and learning about physics and science. Some games that inspire me today: Deltarune, Sifu, Outer Wilds, Celeste, and Hardspace: Shipbreaker.
 </section>
 </div>
 [⇓ Download CV ⇓](assets/downloads/about/FinlayLaidlaw_CV.pdf){:.button-link}
 </div>
 
-<div id="skills-panel">
-<div id="skills">
+<div class="skills-panel">
+<div class="skills">
 <section markdown="1">
-## Unreal Engine 5
-Unreal Engine 5 is the platform with which I have the most experience. 
-I worked with it professionally at Sumo for a year, working on multiplayer networking, UI logic, and gameplay systems. 
-Outside of work, we used it at Abertay to create Braise Satan. During my final year of university, I continued to use Unreal Engine for the development of Heldritch Rush, where I worked on all areas of game programming.
-## C++
-C++ has been my language of choice throughout my programming journey. 
-I started using it in high school and have continued to hone my skills with it through university and my placement.
-If you want to see some of my code, [look here](https://github.com/CyborgCabbage/yournespal).
+
+# Experiences
+* Heldritch Rush / Programmer (UE5)
+* Sumo Digital / Placement Programmer (UE5)
+* Braise Satan (DARE Academy) / Programmer (UE5)
+* AURIONNAUT / Developer (C++)
+* Game Jams / Developer (Unity/Godot/UE5)
+* Undertale for the NES / Developer (6502)
+
+## BSc (Hons) Computer Games Technology
+* Creating many game projects
+* Multi-disciplinary collaboration
+* Engine programming: scene/object management and creating usable APIs
+* Graphics Programming: DirectX11, OpenGL, shadow maps, compute shaders
+* Network programming: 
+* Mathematics: rigid-body physics, splines, collisions, and intersections.
+* Multiplayer networking
+* Primarily C++, but also TypeScript and Python
+
 </section>
 <section markdown="1">
-## Other Experience
-I have experience with a few other programming languages, most recently I used TypeScript heavily for my honours project. I am adaptable to different tools, I'm confident in my core programming and learning skills.
-## Collaboration
-I have experience working in a large and small teams. I really enjoyed my first collaborative experience working on Braise Satan in a team of 8, and I was also fortunate to work in larger team of around 70 at Sumo. Working with others is big motivating factor for me.
+
+# Skills
+
+## C++
+* Modern C++, up to C++23
+* Using the standard library
+* Safe memory management with smart pointers
+* Error handling with expected or exceptions 
+* Clean coding practices (encapsulation, DRY, good names, etc.)
+* Learning and integrating new libraries as needed
+* If you want to see some of my code, [look here](https://github.com/CyborgCabbage/yournespal).
+
+## Unreal Engine 5
+* 3Cs: Enhanced Input and Mover
+* UI programming: Common UI, UMG, Editor Menu Extensions, and Slate
+* Tools programming: implementing undo/redo support, integrating with RewindDebugger, and various minor debug features
+* Multiplayer: C++ Game Framework (PlayerState, GameMode, etc.), RPCs, fixing networking bugs
+* Architecture: Using Subsystems,
+
+## Soft Skills
+* Getting up to speed with an existing project and processes quickly
+* Researching and learning new skills independently as needed
+* Communicating with others to solve problems on large teams
+* Using professional workflows: Jira, CI/CD, code review, and adhering to coding standards 
+* Using a variety of resources to solve problems: documentation, blog-posts, reading source-code, learning new debug tools, testing to confirm expected behaviour
+
+## Engine Level
+* DirectX11 and OpenGL
+* Scene and object management
+* Low level networking
+* Using physics, audio, input, and windowing libraries
+
+## Miscellaneous
+* Some experience with Godot and Unity in game jams
+* HTML, CSS, TypeScript and WebAssembly
+
 </section>
 </div>
 <figure class="quote">
+
 <blockquote markdown="1">
 Finlay is a fantastic programmer to work with. He's got a great attitude, is extremely fast and capable at prototyping, and isn't afraid to speak up and make suggestions to improve the features he is working on. He's also really engaged and delivers work extremely quickly. 
 

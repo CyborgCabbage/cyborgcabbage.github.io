@@ -10,9 +10,15 @@ $hover-color: #7aff97;
 }
 
 ul { 
-  list-style-type: " ‣ ";
-  list-style-position: inside;
-  padding-left: 0;
+  list-style-type: "‣";
+  list-style-position: outside;
+  padding-left: 1ch;
+}
+
+
+li {
+  padding-left: 1ch;
+  margin: 0.3em 0
 }
 
 html {
@@ -52,6 +58,7 @@ a {
 a:hover {
     color: $hover-color;
 }
+
 
 header, footer {
   background-color: $bar-color;
@@ -124,7 +131,7 @@ figcaption {
 
 .quote {
   background-color: hsla(0, 0%, 15%);
-  max-width: 80ch;
+  max-width: 840px;
 }
 
 figure {
@@ -195,7 +202,7 @@ code {
 
 /*Home Page Projects and skills*/
 
-#skills-panel {
+.skills-panel {
   background-color: hsla(0, 0%, 10%);
   display: flex;
   flex-direction: column;
@@ -208,7 +215,7 @@ code {
   border-bottom-left-radius: min(160px, (100vw - 960px) / 2);
 }
 
-#skills {
+.skills {
   align-self: center;
   display: flex;
   align-items: flex-start;
@@ -216,14 +223,14 @@ code {
   gap: 2rem;
 }
 
-#skills section {
+.skills section {
   flex-grow: 1;
   flex-basis: 0;
   max-width: 80ch;
 }
 
 @media screen and (width < 720px) {
-  #skills {
+  .skills {
     flex-direction: column;
     justify-content: flex-start;
     gap: 0;
