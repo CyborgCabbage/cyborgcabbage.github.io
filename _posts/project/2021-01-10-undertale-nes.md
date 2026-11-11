@@ -3,7 +3,7 @@ layout: post
 title: Undertale for the NES
 tag: highlight
 image: /assets/images/thumb_undertale.png
-background: /assets/images/thumb_undertale.png
+background: /assets/images/black.png
 sortby: f
 summary: |-
  # Developer

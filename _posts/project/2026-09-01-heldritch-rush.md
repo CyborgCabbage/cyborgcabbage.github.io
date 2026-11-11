@@ -2,7 +2,7 @@
 layout: post
 title: Heldritch Rush
 tag: highlight
-image: /assets/images/thumb_heldritch.png
+image: /assets/images/thumb_heldritch.jpg
 background: /assets/images/heldritch_spline.png
 sortby: b
 summary: |-
