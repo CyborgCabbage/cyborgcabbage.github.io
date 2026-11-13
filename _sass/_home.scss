@@ -54,25 +54,18 @@
 }
 
 .skills {
-  align-self: center;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.skills section {
-  flex-grow: 1;
-  flex-basis: 0;
-  max-width: 80ch;
+  width: 100%;
+  columns: 2 400px;
+  column-gap: 3rem;
+  section {
+    text-justify: left;
+     break-inside: avoid;
+     display: inline-block
+    /*display: block flow-root;*/
+  }
 }
 
 @media screen and (width < 840px) {
-  .skills {
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 0;
-  }
 }
 
 /* Featured project */
@@ -101,9 +94,11 @@
   padding: 1rem;
   width: min(960px, 100vw);
   img {
+    display: block;
     width: 100%;
   }
   .project-thumbnail {
+    display: block;
     flex-shrink: 0;
     width: 360px;
   }
@@ -120,6 +115,20 @@
     p, li {
       font-size: 14px;
     }
+  }
+}
+
+.project-link {
+  background-color: vars.$hover-color;
+  padding: 1rem;
+  color: vars.$bar-color;
+  a {
+    font-size: 130%;
+    text-decoration: none;
+    color: vars.$bar-color;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 }
 

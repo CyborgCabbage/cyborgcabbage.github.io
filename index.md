@@ -99,7 +99,9 @@ I'd happily work with Finlay again in the future, and have no doubt he has a bri
 <div class="project-panel">
 <section class="project-thumbnail">
 <img src="{{ post.image }}" />
-<a href="{{ post.url }}">Go to project page</a>
+<div class="project-link">
+<a href="{{ post.url }}">Find out more</a>&nbsp;➔
+</div>
 </section>
 <section markdown="1" class="project-summary">
 {{ post.summary }}
