@@ -1,8 +1,9 @@
+@use "vars";
 
 /*Home page bio*/
 
 #bio-panel {
-  background-color: hsla(0, 0%, 15%);
+  background-color: vars.$light-panel;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +41,7 @@
 /*Home Page Projects and skills*/
 
 .skills-panel {
-  background-color: hsla(0, 0%, 10%);
+  background-color: vars.$dark-panel;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,7 +67,7 @@
   max-width: 80ch;
 }
 
-@media screen and (width < 720px) {
+@media screen and (width < 840px) {
   .skills {
     flex-direction: column;
     justify-content: flex-start;
@@ -122,7 +123,7 @@
   }
 }
 
-@media screen and (width < 720px) {
+@media screen and (width < 840px) {
   .project-panel {
     flex-direction: column !important;
     align-items: center;

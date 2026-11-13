@@ -9,12 +9,14 @@ permalink: /:title:output_ext
   </head>
   <body>
     {% include header.html %}
-    <main class="content">
+    <div class="narrow-content light-panel" style="z-index:1">
       <h1 class="centred">{{ page.title }}</h1>
       <p class="date">{{ page.date | date_to_string }}</p>
+    </div>
+    <main class="narrow-content dark-panel grower">
       {{ content }}
-      {% include post-list.html %}
     </main>
+    {% include post-list.html %}
     {% include footer.html %}
   </body>
 </html>

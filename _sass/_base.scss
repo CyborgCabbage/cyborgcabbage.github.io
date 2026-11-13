@@ -1,9 +1,4 @@
-$bar-color: #004237;
-$bg-color: #0e0e0e;
-$text-color: #ffffff;
-$caption-color: #b8b8b8;
-$link-color: #d6fade;
-$hover-color: #7aff97;
+@use "vars";
 
 * {
   box-sizing: border-box;
@@ -23,8 +18,8 @@ li {
 
 html {
   height: 100%;
-  background-color: $bg-color;
-  color: $text-color;
+  background-color: vars.$bg-color;
+  color: vars.$text-color;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   height: 100%;
 }
@@ -32,14 +27,18 @@ html {
 body {
   min-height: 100%;
   margin: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
+  background-color: vars.$bg-color;
   background-image: url("/assets/images/bg.png");
   background-blend-mode: multiply;
   background-repeat: repeat;
   text-align: justify;
   text-justify: inter-word;
+}
+
+.grower {
+  flex-grow: 1;
 }
 
 .content {
@@ -48,27 +47,47 @@ body {
   margin: 0 auto;
 }
 
+.narrow-content {
+  display: flow-root;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.dark-panel {
+  background-color: vars.$dark-panel;
+}
+
+.light-panel {
+  background-color: vars.$light-panel;
+}
+
+summary {
+  margin: 1em 0;
+}
+
 a {
-    color: $link-color;
+    color: vars.$link-color;
     text-decoration-style: dotted;
     text-underline-offset: 0.1em;
-    text-decoration-color: rgba($link-color, 0.5);
+    text-decoration-color: rgba(vars.$link-color, 0.5);
 }
 
 a:hover {
-    color: $hover-color;
+    color: vars.$hover-color;
 }
 
 
 header, footer {
-  background-color: $bar-color;
+  background-color: vars.$bar-color;
   background-image: url("/assets/images/bg_bar.png");
   background-blend-mode: multiply;
   background-repeat: repeat;
 }
 
 #header-name {
-  color: $text-color;
+  color: vars.$text-color;
   text-decoration: none;
 }
 
@@ -96,12 +115,19 @@ footer {
   max-width: 100%;
   display: block;
   margin: auto;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,0.5));
+}
+
+.embed-container {
+  margin: 1em 0;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,0.5));
 }
 
 figcaption {
+  margin: 1em 0;
   text-align: center;
   font-style: italic;
-  color: $caption-color;
+  color: vars.$caption-color;
 }
 
 .date {
@@ -115,8 +141,8 @@ figcaption {
 }
 
 .button-link {
-  background-color: $hover-color;
-  color: $bar-color;
+  background-color: vars.$hover-color;
+  color: vars.$bar-color;
   margin: 6px;
   padding: 0 0.3em;
   font-size: 130%;
@@ -125,12 +151,12 @@ figcaption {
   display: inline flow-root;
 }
 .button-link:hover {
-  background-color: $link-color;
-  color: $bar-color;
+  background-color: vars.$link-color;
+  color: vars.$bar-color;
 }
 
 .quote {
-  background-color: hsla(0, 0%, 15%);
+  background-color: vars.$light-panel;
   max-width: 840px;
 }
 
@@ -143,7 +169,7 @@ blockquote {
   margin-inline: 15px;
 }
 
-.content pre, .content pre code {
+.highlight pre, .highlight pre code {
   white-space: pre-wrap !important;
   word-break: break-word !important;
   overflow-wrap: break-word !important;

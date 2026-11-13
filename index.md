@@ -20,6 +20,8 @@ I'm a games programmer who believes in writing clean code and making my code *wo
 I am confident in my C++ and Unreal Engine 5 skills, with professional experience at Sumo Digital and 1st class honours in BSc (Hons) Computer Games Technology at Abertay. I have made mods, participated in game jams, the Grads in Games Rising Star Programming challenge, and Abertay’s DARE Academy.
 
 I like indie games, reading sci-fi/fantasy, and learning about physics and science. Some games that inspire me today: Deltarune, Sifu, Outer Wilds, Celeste, and Hardspace: Shipbreaker.
+
+I'm looking for work as a games programmer either locally in Dundee or remote. I can also work hybrid in Edinburgh, depending on the details.
 </section>
 </div>
 [⇓ Download CV ⇓](assets/downloads/about/FinlayLaidlaw_CV.pdf){:.button-link}
@@ -28,29 +30,6 @@ I like indie games, reading sci-fi/fantasy, and learning about physics and scien
 <div class="skills-panel">
 <div class="skills">
 <section markdown="1">
-
-# Experiences
-* Heldritch Rush / Programmer (UE5)
-* Sumo Digital / Placement Programmer (UE5)
-* Braise Satan (DARE Academy) / Programmer (UE5)
-* AURIONNAUT / Developer (C++)
-* Game Jams / Developer (Unity/Godot/UE5)
-* Undertale for the NES / Developer (6502)
-
-## BSc (Hons) Computer Games Technology
-* Creating many game projects
-* Multi-disciplinary collaboration
-* Engine programming: scene/object management and creating usable APIs
-* Graphics Programming: DirectX11, OpenGL, shadow maps, compute shaders
-* Network programming: 
-* Mathematics: rigid-body physics, splines, collisions, and intersections.
-* Multiplayer networking
-* Primarily C++, but also TypeScript and Python
-
-</section>
-<section markdown="1">
-
-# Skills
 
 ## C++
 * Modern C++, up to C++23
@@ -61,12 +40,18 @@ I like indie games, reading sci-fi/fantasy, and learning about physics and scien
 * Learning and integrating new libraries as needed
 * If you want to see some of my code, [look here](https://github.com/CyborgCabbage/yournespal).
 
+</section>
+<section markdown="1">
+
 ## Unreal Engine 5
 * 3Cs: Enhanced Input and Mover
 * UI programming: Common UI, UMG, Editor Menu Extensions, and Slate
 * Tools programming: implementing undo/redo support, integrating with RewindDebugger, and various minor debug features
 * Multiplayer: C++ Game Framework (PlayerState, GameMode, etc.), RPCs, fixing networking bugs
-* Architecture: Using Subsystems,
+* Architecture: Using Subsystems, using Actors and Actor Components, designing new systems.
+
+</section>
+<section markdown="1">
 
 ## Soft Skills
 * Getting up to speed with an existing project and processes quickly
@@ -75,11 +60,17 @@ I like indie games, reading sci-fi/fantasy, and learning about physics and scien
 * Using professional workflows: Jira, CI/CD, code review, and adhering to coding standards 
 * Using a variety of resources to solve problems: documentation, blog-posts, reading source-code, learning new debug tools, testing to confirm expected behaviour
 
+</section>
+<section markdown="1">
+
 ## Engine Level
-* DirectX11 and OpenGL
+* Graphics programming: DirectX11, OpenGL, shader programming, compute shaders, shadow mapping, normal maps, instanced rendering.
 * Scene and object management
 * Low level networking
 * Using physics, audio, input, and windowing libraries
+
+</section>
+<section markdown="1">
 
 ## Miscellaneous
 * Some experience with Godot and Unity in game jams
@@ -88,7 +79,7 @@ I like indie games, reading sci-fi/fantasy, and learning about physics and scien
 </section>
 </div>
 <figure class="quote">
-
+<img>
 <blockquote markdown="1">
 Finlay is a fantastic programmer to work with. He's got a great attitude, is extremely fast and capable at prototyping, and isn't afraid to speak up and make suggestions to improve the features he is working on. He's also really engaged and delivers work extremely quickly. 
 

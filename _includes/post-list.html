@@ -1,8 +1,10 @@
-<details>
-    <summary>All Posts</summary>
-    <ul> 
-        {% for post in site.posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a> <span style="color: lightgrey; font-style: italic;">{{ post.date | date_to_string }}</span></li>
-        {% endfor %}
-    </ul>
-</details>
+<div class="narrow-content light-panel">
+    <details>
+        <summary>All Posts</summary>
+        <ul> 
+            {% for post in site.posts %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a> <span style="color: lightgrey; font-style: italic;">{{ post.date | date_to_string }}</span></li>
+            {% endfor %}
+        </ul>
+    </details>
+</div>
