@@ -156,18 +156,10 @@ figcaption {
   color: vars.$bar-color;
 }
 
-.quote {
-  background-color: vars.$light-panel;
-  max-width: 840px;
-}
 
 figure {
   margin-inline: 15px;
   display: flow-root;
-}
-
-blockquote {
-  margin-inline: 15px;
 }
 
 .highlight pre, .highlight pre code {

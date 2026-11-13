@@ -15,3 +15,6 @@ summary: |-
  * Network programming: TCP/UDP, researching and implementing roll back for player movement
  * Mathematics: rigid-body physics, splines, collisions, and intersections
 ---
+Under contruction... this page is very new as of remaking my whole site.
+
+The most important projects from University are my 3rd year project [Braise Satan]({% post_url /project/2024-10-27-braise-satan %}) and my [final year project]({% post_url /project/2026-05-09-honours %}).

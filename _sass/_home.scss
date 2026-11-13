@@ -85,8 +85,11 @@
 }
 .project-panel {
   border-top-width: 2px;
-  border-top-style: dashed;
+  border-top-style: solid;
   border-top-color: #ffffff7f;
+  border-bottom-width: 2px;
+  border-bottom-style: dashed;
+  border-bottom-color: #ffffff3f;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -119,17 +122,9 @@
 }
 
 .project-link {
-  background-color: vars.$hover-color;
+  display: flex;
+  justify-content: center;
   padding: 1rem;
-  color: vars.$bar-color;
-  a {
-    font-size: 130%;
-    text-decoration: none;
-    color: vars.$bar-color;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
 }
 
 @media screen and (width < 840px) {
@@ -139,6 +134,42 @@
     gap: 0;
     .project-thumbnail, .project-summary {
       width: 100%;
+    }
+  }
+}
+
+/*Quote*/
+
+.quote {
+  display: flex;
+  background-color: vars.$light-panel;
+  max-width: 840px;
+  padding: 1rem;
+  border-radius: 1rem;
+  align-items: center;
+  gap: 1rem;
+  img {
+    flex-shrink: 1;
+    align-self: center;
+    clip-path: circle();
+    width: 150px;
+  }
+  blockquote {
+    margin: 0;
+    :first-child {
+      margin-top: 0;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (width < 840px) {
+  .quote {
+    flex-direction: column;
+    img {
+      align-self: flex-start;
     }
   }
 }

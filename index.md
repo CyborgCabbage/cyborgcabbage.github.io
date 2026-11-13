@@ -79,7 +79,7 @@ I'm looking for work as a games programmer either locally in Dundee or remote. I
 </section>
 </div>
 <figure class="quote">
-<img>
+<img src="/assets/images/thomasjpg.jpg"/>
 <blockquote markdown="1">
 Finlay is a fantastic programmer to work with. He's got a great attitude, is extremely fast and capable at prototyping, and isn't afraid to speak up and make suggestions to improve the features he is working on. He's also really engaged and delivers work extremely quickly. 
 
@@ -99,13 +99,13 @@ I'd happily work with Finlay again in the future, and have no doubt he has a bri
 <div class="project-panel">
 <section class="project-thumbnail">
 <img src="{{ post.image }}" />
-<div class="project-link">
-<a href="{{ post.url }}">Find out more</a>&nbsp;➔
-</div>
 </section>
 <section markdown="1" class="project-summary">
 {{ post.summary }}
 </section>
+</div>
+<div class="project-link">
+<a href="{{ post.url }}" class="button-link">Find out more ➔</a>
 </div>
 </div>
 </div>
