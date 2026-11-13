@@ -3,7 +3,7 @@ layout: post
 title: Braise Satan
 tag: highlight
 image: /assets/images/thumb_braise_satan.jpg
-background: /assets/images/braise_satan_hell.png
+background: /assets/images/braise_satan_hell.jpg
 sortby: d
 summary: |-
  # Unreal Engine 5 Programmer
@@ -33,11 +33,11 @@ After brain-storming we decided to create a cooking game set in hell. The gamepl
 
 This was the first time I had used Unreal Engine 5 and worked in team for an extended period of time, so I learned a lot about how to collaborate. In terms of programming, I worked in both C++ and Blueprints. Some things I was the primary contributor for were the cooking mechanics, the recipe system, and scoring.
 
-{% include image.html url="/assets/images/braise_satan_early_build.png" description="An early build, with basic cooking mechanics and imp behaviour implemented" %}
+{% include image.html url="/assets/images/braise_satan_early_build.jpg" description="An early build, with basic cooking mechanics and imp behaviour implemented" %}
 
 I implemented an object interaction system using an interface and the Physics Handle Component. Objects can also be snapped together, which is implemented using a custom Lock Point Component. When an object is released while overlapping a Lock Point it becomes attached to the lock point in a parent child relationship.
 
-{% include image.html url="/assets/images/braise_satan_interaction.png" description="The advanced emergent gameplay possible with physics based item interaction" %}
+{% include image.html url="/assets/images/braise_satan_interaction.jpg" description="The advanced emergent gameplay possible with physics based item interaction" %}
 
 As I worked on the item interaction and cooking, the other programmer Aaron implemented the Imp AI (it spawns, steals an ingredient, and then runs away). Getting art assets into the engine isn't a priority at this point, but Finn and Stuart were able to design and model the Imp (respectively) pretty quick so we got that in.
 
@@ -61,7 +61,7 @@ Some little features I like:
 
 Our team decided to take our project further and participate in the DARE Academy program. In DARE, you work mostly full-time for a month on your game and then at the end are judged based on various criteria; some games are created from scratch during DARE but you can also use it to "update" an existing game. Our focuses were making a better tutorial, redesigning the level (with a unique model for the devil), and adding some new ingredients (the stupid little slug, as seen in the trailer).
 
-{% include image.html url="/assets/images/braise_satan_hell.png" description="New level overview" %}
+{% include image.html url="/assets/images/braise_satan_hell.jpg" description="New level overview" %}
 
 We (programmers) struggled quite a bit with getting everything done, the new level required gates and trigger boxes to control the players movement, and we also wanted to control how many ingredients the player could take down stairs. I also had to implement automatic restocking for the pantry, to stop the player from running out of ingredients and getting soft-locked (which was possible in the previous build). 
 
