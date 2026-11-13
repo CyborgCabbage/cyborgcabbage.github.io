@@ -168,8 +168,5 @@
 @media screen and (width < 840px) {
   .quote {
     flex-direction: column;
-    img {
-      align-self: flex-start;
-    }
   }
 }

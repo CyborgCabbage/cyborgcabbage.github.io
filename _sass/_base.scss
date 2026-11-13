@@ -10,11 +10,9 @@ ul {
   padding-left: 1ch;
 }
 
-
 li {
   padding-left: 1ch;
   margin: 0.3em 0;
-  text-align: left;
 }
 
 html {
@@ -34,6 +32,9 @@ body {
   background-image: url("/assets/images/bg.png");
   background-blend-mode: multiply;
   background-repeat: repeat;
+}
+
+p {
   text-align: justify;
   text-justify: inter-word;
 }
@@ -92,16 +93,15 @@ header, footer {
   text-decoration: none;
 }
 
-header h1 {
-  margin-bottom: 0;
-}
-
-header p { 
-  margin-top: 0;
-}
-
-header .content {
+header {
   text-align: center;
+  h1 {
+    margin-bottom: 0;
+  }
+  h2 { 
+    font-size: medium;
+    margin-top: 0;
+  }
 }
 
 footer {
@@ -131,12 +131,6 @@ figcaption {
   color: vars.$caption-color;
 }
 
-.date {
-  text-align: center; 
-  font-style: bold;
-  color: lightgrey;
-}
-
 .email > span:nth-child(even) {
 	display: none;
 }
@@ -155,7 +149,6 @@ figcaption {
   background-color: vars.$link-color;
   color: vars.$bar-color;
 }
-
 
 figure {
   margin-inline: 15px;
