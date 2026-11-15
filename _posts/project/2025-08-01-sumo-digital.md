@@ -7,22 +7,24 @@ background: /assets/images/project_d5.jpg
 sortby: a
 summary: |-
  # Placement Programmer
- * Join projects in-development to provide additional programming support to teams
+ * Join an in-development project as a programmer
+ * Understand an existing code-base from reading source-code
  * Program for Unreal Engine 5 using C++ and Blueprints
  * Use Jira for task management and Miro for creating documentation
  * Use Swarm for code review
  * Use Perforce with UGS for source control
 
  ## Project D5 (Gamemodes Team)
- * Join game modes team: implementing features, fixing bugs, owning and maintaining systems
+ * Join the gamemodes team: implementing features, fixing bugs, owning and maintaining systems
  * Fix bugs affecting gamemodes, including UI, networking, and Game Ability System related
  * Implement new gameplay features based on requests or specifications
  * Fix bugs and complete tasks listed in Jira without needing additional support
  * Own two gamemodes, fixing bugs and implementing new features as required
+ * Harden Blueprint prototypes, and convert them C++
  
  ## Unannounced Unreal Engine 5 Project (3Cs Team)
- * Join the 3Cs team TODO
- * Work with Unreal's Mover system to implement player character locomotion
+ * Join the 3Cs team, working mostly on character movement and combat
+ * Work with Unreal's Mover system to for player character locomotion
  * Implement locomotion debugging visualisations with Rewind Debugger and line drawing
  * Implement player combat and movement abilities
  * Implement prototype abilities from a specification, iterating with designer feedback

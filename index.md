@@ -15,11 +15,11 @@ title: Home
 <section markdown="1">
 
 # Hi, I'm Finlay
-I'm a games programmer who believes in writing clean code and making my code *work* for others. I enjoy making good tools, fixing tricky bugs, finding new methods, and working with other skilled professionals to bring ideas into reality.
+I'm a Dundee-based games programmer who believes in writing clean code that serves others. I enjoy making good tools, fixing tricky bugs, finding new methods, and working with other skilled professionals to bring ideas into reality.
 
 I am confident in my C++ and Unreal Engine 5 skills, with professional experience at Sumo Digital and 1st class honours in BSc (Hons) Computer Games Technology at Abertay. I have made mods, participated in game jams, the Grads in Games Rising Star Programming challenge, and Abertay’s DARE Academy.
 
-I like indie games, reading sci-fi/fantasy, and learning about physics and science. Some games that inspire me today: Deltarune, Sifu, Outer Wilds, Celeste, and Hardspace: Shipbreaker.
+I like games, reading sci-fi/fantasy, and learning about physics and science. Some games that inspire me today: Deltarune, Sifu, Outer Wilds, Celeste, and Hardspace: Shipbreaker.
 
 I'm looking for work as a games programmer either locally in Dundee or remote. I can also work hybrid in Edinburgh, depending on the details.
 </section>
@@ -33,7 +33,6 @@ I'm looking for work as a games programmer either locally in Dundee or remote. I
 
 ## C++
 * Modern C++, up to C++23
-* Using the standard library
 * Safe memory management with smart pointers
 * Error handling with expected or exceptions 
 * Clean coding practices (encapsulation, DRY, good names, etc.)
@@ -54,11 +53,11 @@ I'm looking for work as a games programmer either locally in Dundee or remote. I
 <section markdown="1">
 
 ## Soft Skills
-* Getting up to speed with an existing project and processes quickly
-* Researching and learning new skills independently as needed
-* Communicating with others to solve problems on large teams
+* Working in large and small teams
+* Researching and learning independently as needed
+* Communicating with others to solve problems
 * Using professional workflows: Jira, CI/CD, code review, and adhering to coding standards 
-* Using a variety of resources to solve problems: documentation, blog-posts, reading source-code, learning new debug tools, testing to confirm expected behaviour
+* Using a variety of resources to solve problems: documentation, blog-posts, reading source-code
 
 </section>
 <section markdown="1">
@@ -74,7 +73,8 @@ I'm looking for work as a games programmer either locally in Dundee or remote. I
 
 ## Miscellaneous
 * Some experience with Godot and Unity in game jams
-* HTML, CSS, TypeScript and WebAssembly
+* Some C, C#, Python, and Typescript experience
+* Some HTML/CSS experience (this website is hand-made)
 
 </section>
 </div>
@@ -85,7 +85,7 @@ Finlay is a fantastic programmer to work with. He's got a great attitude, is ext
 
 I'd happily work with Finlay again in the future, and have no doubt he has a bright future ahead of him in the games industry.
 
-  —Thomas Chase, Senior Principle 3Cs Designer at Sumo Digital Sheffield
+—Thomas Chase, Senior Principle 3Cs Designer at Sumo Digital Sheffield ([Source](https://www.linkedin.com/in/finlay-laidlaw-3302ab2b1/))
 </blockquote>
 </figure>
 </div>

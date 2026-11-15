@@ -9,7 +9,8 @@ summary: |-
  # Unreal Engine 5 Programmer
  * Set technical direction for Unreal Engine 5 project
  * Manage tasks, assist, and review work of other programmers
- * Program in C++ and Blueprints, creating Blueprint APIs for myself and others
+ * Program in C++ and Blueprints, with native systems supporting Blueprint scripting
+ * Using Git and Trello
 
  ## Input and UI
  * Develop input and UI system using Common UI and Enhanced Input
@@ -18,7 +19,7 @@ summary: |-
 
  ## AI & Navigation
  * Create State Trees for ranged and melee enemies
- * Modify State Tree Component to pull enemy configuration from a Data Table
+ * Create custom State Tree Component that pulls enemy configuration from a Data Table
  * Create centralised enemy positioning system using Environmental Queries
  
  ## Animation Blueprints & Materials
