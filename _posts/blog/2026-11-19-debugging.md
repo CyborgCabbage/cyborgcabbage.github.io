@@ -116,7 +116,7 @@ Ha! well yeah, that is a bit overkill. I should count my blessings, the other ki
 
 Okay but why does the issue occur at high framerates?
 
-In order to be colliding with the floor, the gameobject must fall at least ~1 floating point unit inside of it. The bug is caused by a lack of floating point precision, where at a high framerate the gameobject's acceleration and velocity are too low for them to move at all.
+In order to be colliding with the floor, the gameobject must fall at least one floating point unit inside of it. The bug is caused by a lack of floating point precision, where at a high framerate the gameobject's acceleration and velocity are too low for them to move at all.
 
 If I assume that the gameobject is around 100 tiles away from the origin, I can calculate the precision around that value. A bit of Googling, and I found a neat website for this: <http://www.ehopkinson.com/cgi-bin/floatprecision_htmlout?float=100>. This site says at 100, the next closest value is 0.000008 away. If the update to the gameobject's position falls below that threshold, they won't move, they won't collide with the floor, "onFloor" will be "false", and the falling sprite will be shown.
 
@@ -163,9 +163,9 @@ movement = Level::GRAVITY × Δt × Level::PHYSICS_SCALE × Δt
 
 ↓ From the delta time, the frames-per-second can be calculated
 
-FPS = 1 ÷ 0.0001 = 10,000
+FPS = 1 ÷ 0.0001 = *10,000*{:.underline}
 {:.equation}
 
 </div>
 
-That's not exactly where the bug begins, but it is the same order of magnitude, and considering how single floating point units will likely slip here and there in the collision math... I'll consider this case closed.
+In the real world, the bug begins to occur before hitting the 10,000 FPS mark. This is because a small amount of precision is lost at each step in the collision detection calculation, meaning overlaps of only one unit can't always be detected.
