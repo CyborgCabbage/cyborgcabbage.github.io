@@ -132,20 +132,40 @@ Then the robot is actually moved:
 move(vel * Level::PHYSICS_SCALE * dt);
 {% endhighlight %}
 
-I can work backwards to calculate the "dt" at which the game object will move exactly one unit:
-{% highlight cpp %}
-// Using the code snippets above, this is the amount the player will move
-movement = Level::GRAVITY * dt * Level::PHYSICS_SCALE * dt
-// ↓ Substitute in constants
-0.000008 = 8 * dt * 100 * dt
-// ↓ Cancel out both sides
-0.00000001 = dt * dt
-// ↓ Rearrange
-dt = sqrt(0.00000001)
-// ↓ Apply square root
-dt = 0.0001
-// ↓ From the delta time, the frames-per-second can be calculated
-fps = 1/0.0001 = 10,000
-{% endhighlight %}
+I can work backwards to calculate the "dt" or "Δt" at which the game object will move exactly one unit:
+
+<div class="maths" markdown="1">
+
+Using the code snippets above, this is the amount the player will move
+
+movement = Level::GRAVITY × Δt × Level::PHYSICS_SCALE × Δt
+{:.equation}
+
+↓ Substitute in constants
+
+0.000008 = 8 × Δt × 100 × Δt
+{:.equation}
+
+↓ Cancel out both sides
+
+0.00000001 = Δt × Δt
+{:.equation}
+
+↓ Rearrange
+
+Δt = √0.00000001
+{:.equation}
+
+↓ Apply square root
+
+Δt = 0.0001
+{:.equation}
+
+↓ From the delta time, the frames-per-second can be calculated
+
+FPS = 1 ÷ 0.0001 = 10,000
+{:.equation}
+
+</div>
 
 That's not exactly where the bug begins, but it is the same order of magnitude, and considering how single floating point units will likely slip here and there in the collision math... I'll consider this case closed.

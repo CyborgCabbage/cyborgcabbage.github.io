@@ -5,3 +5,19 @@
   font-style: bold;
   color: lightgrey;
 }
+
+.maths {
+  background-color: hsl(0, 0, 5%);
+  display: flow-root;
+  margin: 8px;
+  padding: 0.5rem 1rem;
+  p {
+    margin: 0.5em 0;
+  }
+}
+
+.equation {
+  font-style: italic;
+  font-weight: bold;
+}
+
