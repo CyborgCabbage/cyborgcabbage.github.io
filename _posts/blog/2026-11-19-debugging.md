@@ -116,9 +116,9 @@ Ha! well yeah, that is a bit overkill. I should count my blessings, the other ki
 
 Okay but why does the issue occur at high framerates?
 
-In order to be colliding with the floor, the gameobject must fall at least ~1 floating point unit inside of it. The bug is caused by a lack of floating point precision, where at a high framerate the players acceleration and velocity are too low for them to move at all.
+In order to be colliding with the floor, the gameobject must fall at least ~1 floating point unit inside of it. The bug is caused by a lack of floating point precision, where at a high framerate the gameobject's acceleration and velocity are too low for them to move at all.
 
-If I assume that the gameobject is around 100 tiles away from the origin, I can calculate the precision around that value. A bit of Googling, and I found a neat website for this: <http://www.ehopkinson.com/cgi-bin/floatprecision_htmlout?float=100>. This site says at 100, the next closest value is 0.000008 away. If the update to the gameobjects position falls below that threshold, they won't move, they won't collide with the floor, "onFloor" will be "false", and the falling sprite will be shown.
+If I assume that the gameobject is around 100 tiles away from the origin, I can calculate the precision around that value. A bit of Googling, and I found a neat website for this: <http://www.ehopkinson.com/cgi-bin/floatprecision_htmlout?float=100>. This site says at 100, the next closest value is 0.000008 away. If the update to the gameobject's position falls below that threshold, they won't move, they won't collide with the floor, "onFloor" will be "false", and the falling sprite will be shown.
 
 So, how much is the gameobject moving down per frame, what determines that? Gravity is a constant 8 units per second and is applied at the beginning of "EnemyRobot::Update(...)":
 {% highlight cpp %}
@@ -134,11 +134,17 @@ move(vel * Level::PHYSICS_SCALE * dt);
 
 I can work backwards to calculate the "dt" at which the game object will move exactly one unit:
 {% highlight cpp %}
-movement = Level::GRAVITY * dt * Level::PHYSICS_SCALE * dt;
+// Using the code snippets above, this is the amount the player will move
+movement = Level::GRAVITY * dt * Level::PHYSICS_SCALE * dt
+// ↓ Substitute in constants
 0.000008 = 8 * dt * 100 * dt
+// ↓ Cancel out both sides
 0.00000001 = dt * dt
+// ↓ Rearrange
 dt = sqrt(0.00000001)
+// ↓ Apply square root
 dt = 0.0001
+// ↓ From the delta time, the frames-per-second can be calculated
 fps = 1/0.0001 = 10,000
 {% endhighlight %}
 
