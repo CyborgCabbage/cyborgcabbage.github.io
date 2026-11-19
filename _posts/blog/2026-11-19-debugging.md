@@ -46,7 +46,7 @@ else currentAnimation = &animStand;
 
 The robots animation is driven by this series of if statements in "EnemyRobot::update(...)", this suggests that if the enemy robot is showing flickering with the jump animation then the Boolean "onFloor" must be driving that.
 
-Using "Find References", I can see "GameObject::onFloor" is only set in the function "GameObject::collisionResponse(...)". This function appears to check for overlaps and then move the gameobject so that it is no longer overlapping.
+Using "Find References", I can see this variable is only set in the function "GameObject::collisionResponse(...)". The function appears to check for overlaps and then move the gameobject so that it is no longer overlapping.
 
 {% highlight cpp %}
 void GameObject::collisionResponse(Level& level, float dt) {
@@ -116,11 +116,11 @@ Ha! well yeah, that is a bit overkill. I should count my blessings, the other ki
 
 Okay but why does the issue occur at high framerates?
 
-In order to be ejected vertically from surface, the player must be at least ~1 floating point unit inside it. During the game, the player will be on the order of 100 tiles away from the origin, so I need to know the floating point precision at that value. 
+In order to be colliding with the floor, the gameobject must fall at least ~1 floating point unit inside of it. The bug is caused by a lack of floating point precision, where at a high framerate the players acceleration and velocity are too low for them to move at all.
 
-A bit of Googling, and I found a neat website for this: <http://www.ehopkinson.com/cgi-bin/floatprecision_htmlout?float=100>. This site says at 100, the next increment is 0.000008 away.
+If I assume that the gameobject is around 100 tiles away from the origin, I can calculate the precision around that value. A bit of Googling, and I found a neat website for this: <http://www.ehopkinson.com/cgi-bin/floatprecision_htmlout?float=100>. This site says at 100, the next closest value is 0.000008 away. If the update to the gameobjects position falls below that threshold, they won't move, they won't collide with the floor, "onFloor" will be "false", and the falling sprite will be shown.
 
-So, how much is the player moving down per frame? Gravity is a constant 8 units per second and is applied at the beginning of "EnemyRobot::Update(...)":
+So, how much is the gameobject moving down per frame, what determines that? Gravity is a constant 8 units per second and is applied at the beginning of "EnemyRobot::Update(...)":
 {% highlight cpp %}
 // [vel.y can be assumed to be 0 before this because GameObject::collisionResponse(...) resets it]
 vel.y += Level::GRAVITY * dt;
